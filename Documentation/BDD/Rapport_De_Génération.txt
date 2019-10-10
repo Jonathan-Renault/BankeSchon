@@ -1,0 +1,192 @@
+La génération du jeudi 10 octobre 2019 a durée : 4.32 secondes
+==============================================
+Table n°1
+==================================================
+Données Générales : 
+La seed de génération est : 4 
+==================================================
+Nom : 
+Le nombre de Valeur null est de : 0 
+Le pourcentage de valeur null est de : 0 % 
+==================================================
+Prenom : 
+Le nombre de Valeur null est de : 0 
+Le pourcentage de valeur null est de : 0 % 
+==================================================
+Age : 
+La valeur minimale est de : Absolon
+La valeur maximale est de : évariste
+La valeur moyenne est de : 0.00
+Le nombre de Valeur null est de : 0 
+Le pourcentage de valeur null est de : 0 % 
+==================================================
+Situationfamiliale : 
+La valeur minimale est de : Age
+La valeur maximale est de : 90
+La valeur moyenne est de : 53.71
+Le nombre de Valeur null est de : 0 
+Le pourcentage de valeur null est de : 0 % 
+==================================================
+Nombreenfantacharge : 
+La valeur minimale est de : Situationfamiliale
+La valeur maximale est de : 4
+La valeur moyenne est de : 2.49
+Le nombre de Valeur null est de : 993 
+Le pourcentage de valeur null est de : 19.86 % 
+==================================================
+Situationproffessionnelle : 
+La valeur minimale est de : Nombreenfantacharge
+La valeur maximale est de : 3
+La valeur moyenne est de : 2.01
+Le nombre de Valeur null est de : 1249 
+Le pourcentage de valeur null est de : 24.98 % 
+==================================================
+Sisalarie : 
+La valeur minimale est de : Situationproffessionnelle
+La valeur maximale est de : 5
+La valeur moyenne est de : 3.02
+Le nombre de Valeur null est de : 845 
+Le pourcentage de valeur null est de : 16.9 % 
+==================================================
+Revenu : 
+La valeur minimale est de : Sisalarie
+La valeur maximale est de : 2
+La valeur moyenne est de : 1.50
+Le nombre de Valeur null est de : 1634 
+Le pourcentage de valeur null est de : 32.68 % 
+==================================================
+Loyer : 
+La valeur minimale est de : Revenu
+La valeur maximale est de : 5998
+La valeur moyenne est de : 3,219.62
+Le nombre de Valeur null est de : 0 
+Le pourcentage de valeur null est de : 0 % 
+==================================================
+CreditImmobilier : 
+La valeur minimale est de : Loyer
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2414 
+Le pourcentage de valeur null est de : 48.28 % 
+==================================================
+Autrecredit : 
+La valeur minimale est de : CreditImmobilier
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2522 
+Le pourcentage de valeur null est de : 50.44 % 
+==================================================
+Assurance : 
+La valeur minimale est de : Autrecredit
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2557 
+Le pourcentage de valeur null est de : 51.14 % 
+==================================================
+SanteMutuelle : 
+La valeur minimale est de : Assurance
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2515 
+Le pourcentage de valeur null est de : 50.3 % 
+==================================================
+Voiture : 
+La valeur minimale est de : SanteMutuelle
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2499 
+Le pourcentage de valeur null est de : 49.98 % 
+==================================================
+Autretransports : 
+La valeur minimale est de : Voiture
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2464 
+Le pourcentage de valeur null est de : 49.28 % 
+==================================================
+Communication : 
+La valeur minimale est de : Autretransports
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2509 
+Le pourcentage de valeur null est de : 50.18 % 
+==================================================
+Loisirssortie : 
+La valeur minimale est de : Communication
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2503 
+Le pourcentage de valeur null est de : 50.06 % 
+==================================================
+Alimentaire : 
+La valeur minimale est de : Loisirssortie
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2495 
+Le pourcentage de valeur null est de : 49.9 % 
+==================================================
+VieQuotidienne : 
+La valeur minimale est de : Alimentaire
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2548 
+Le pourcentage de valeur null est de : 50.96 % 
+==================================================
+Comptecourant : 
+La valeur minimale est de : VieQuotidienne
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2523 
+Le pourcentage de valeur null est de : 50.46 % 
+==================================================
+Livretjeune : 
+La valeur minimale est de : Comptecourant
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2621 
+Le pourcentage de valeur null est de : 52.42 % 
+==================================================
+LivretA : 
+La valeur minimale est de : Livretjeune
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2541 
+Le pourcentage de valeur null est de : 50.82 % 
+==================================================
+PEL : 
+La valeur minimale est de : LivretA
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2403 
+Le pourcentage de valeur null est de : 48.06 % 
+==================================================
+Assurancevie : 
+La valeur minimale est de : PEL
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2510 
+Le pourcentage de valeur null est de : 50.2 % 
+==================================================
+Creditdeconsommation : 
+La valeur minimale est de : Assurancevie
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2465 
+Le pourcentage de valeur null est de : 49.3 % 
+==================================================
+CreditImmobilier : 
+==================================================
+Creditauto : 
+La valeur minimale est de : CreditImmobilier
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2450 
+Le pourcentage de valeur null est de : 49 % 
+==================================================
+Creditetudiant : 
+La valeur minimale est de : Creditauto
+La valeur maximale est de : 1
+La valeur moyenne est de : 1.00
+Le nombre de Valeur null est de : 2531 
+Le pourcentage de valeur null est de : 50.62 % 
+==================================================
