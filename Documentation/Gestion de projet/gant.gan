@@ -114,14 +114,13 @@ Déco > Noir]]></notes>
             <task id="88" name="BDD + Schema BDD et reseau" color="#cccccc" meeting="false" start="2019-10-09" duration="2" complete="100" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="36" name="Cours de JAVA" color="#33ff33" meeting="false" start="2019-10-11" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
-        <task id="53" name="Planification S1" color="#000000" meeting="false" start="2019-10-14" duration="4" complete="40" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
+        <task id="53" name="Planification S1" color="#000000" meeting="false" start="2019-10-14" duration="4" complete="100" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
             <task id="92" name="Reprise Gant" color="#ff0033" meeting="false" start="2019-10-14" duration="1" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
             <task id="93" name="Reprise BDD" color="#cccccc" meeting="false" start="2019-10-14" duration="1" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
             <task id="121" name="Gestion" color="#ff0033" meeting="false" start="2019-10-14" duration="1" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
             <task id="122" name="Mentions légales" color="#0033cc" meeting="false" start="2019-10-14" duration="1" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
-            <task id="123" name="Front" color="#0033cc" meeting="false" start="2019-10-15" duration="3" complete="0" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
-            <task id="124" name="Algo + maquette" color="#ff9900" meeting="false" start="2019-10-15" duration="1" complete="0" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
-            <task id="158" name="Auto formation JAVA" color="#33ff33" meeting="false" start="2019-10-16" duration="2" complete="0" thirdDate="2019-10-08" thirdDate-constraint="0" expand="true"/>
+            <task id="123" name="Front" color="#0033cc" meeting="false" start="2019-10-15" duration="3" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
+            <task id="124" name="Algo + maquette" color="#ff9900" meeting="false" start="2019-10-15" duration="3" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="120" name="Cours" color="#33ff33" meeting="false" start="2019-10-18" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
         <task id="58" name="Intégration" color="#ffff00" meeting="false" start="2019-10-21" duration="5" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
@@ -159,7 +158,6 @@ Déco > Noir]]></notes>
         <allocation task-id="121" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="124" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="134" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
-        <allocation task-id="158" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
         <allocation task-id="85" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="58" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
         <allocation task-id="120" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
@@ -167,7 +165,6 @@ Déco > Noir]]></notes>
         <allocation task-id="124" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
         <allocation task-id="128" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="140" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
-        <allocation task-id="158" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
         <allocation task-id="88" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="93" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="58" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
@@ -175,7 +172,6 @@ Déco > Noir]]></notes>
         <allocation task-id="124" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
         <allocation task-id="125" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="147" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
-        <allocation task-id="158" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
         <allocation task-id="88" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
         <allocation task-id="93" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
         <allocation task-id="114" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
