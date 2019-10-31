@@ -1,7 +1,5 @@
 package main.src.com.bankeschon.Models;
 
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.UUID;
 
 public class Prospect {
