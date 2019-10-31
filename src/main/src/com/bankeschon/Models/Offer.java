@@ -5,13 +5,12 @@ import java.util.UUID;
 public class Offer {
     private String tableName = "offers";
 
-    private UUID _id;
     private String offer_name;
     private Integer priority; // de 0 à 3
     private Integer minimum_age;
     private Integer maximum_age;
     private String recommanded_age; // plage d'âge, séparé par - (exemple: 18-30)
-    private Integer salary; // plage de salaire, séparé par - (exemple: 1000-2000)
+    private String recommanded_salary; // plage de salaire, séparé par - (exemple: 1000-2000)
     private Integer recommanded_familial_situation; // 0 = celibataire, 1 = marié/pacsé, 2 = divorcé/veuf
     private Integer recommanded_pro_situation; // 0 = sans emploi, 1 = employé, 2 = cadre, 3 = fonctionnaire, 4 = indé
 
@@ -30,15 +29,6 @@ public class Offer {
     private String   created_at; // à convertir en timestamp
     private String   updated_at; // à convertir en timestamp
 
-    public UUID get_id() {
-        return _id;
-    }
-
-    public Offer set_id(UUID _id) {
-        this._id = _id;
-
-        return this;
-    }
 
     public String getOffer_name() {
         return offer_name;
@@ -90,12 +80,12 @@ public class Offer {
         return this;
     }
 
-    public Integer getSalary() {
-        return salary;
+    public String getSalary() {
+        return recommanded_salary;
     }
 
-    public Offer setSalary(Integer salary) {
-        this.salary = salary;
+    public Offer setSalary(String recommanded_salary) {
+        this.recommanded_salary = recommanded_salary;
 
         return this;
     }
