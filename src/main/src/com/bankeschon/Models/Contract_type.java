@@ -1,7 +1,7 @@
 package main.src.com.bankeschon.Models;
 
-public class Family_situation {
-    private String tableName = "family_situations";
+public class Contract_type {
+    private String tableName = "contract_types";
 
     private String label;
     private Integer number;
@@ -10,7 +10,7 @@ public class Family_situation {
         return label;
     }
 
-    public Family_situation setLabel(String label) {
+    public Contract_type setLabel(String label) {
         this.label = label;
 
         return this;
@@ -20,7 +20,7 @@ public class Family_situation {
         return number;
     }
 
-    public Family_situation setNumber(Integer number) {
+    public Contract_type setNumber(Integer number) {
         this.number = number;
 
         return this;

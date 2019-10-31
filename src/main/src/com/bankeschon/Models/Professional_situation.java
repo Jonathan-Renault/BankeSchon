@@ -1,7 +1,7 @@
 package main.src.com.bankeschon.Models;
 
-public class Family_situation {
-    private String tableName = "family_situations";
+public class Professional_situation {
+    private String tableName = "professional_situations";
 
     private String label;
     private Integer number;
@@ -10,7 +10,7 @@ public class Family_situation {
         return label;
     }
 
-    public Family_situation setLabel(String label) {
+    public Professional_situation setLabel(String label) {
         this.label = label;
 
         return this;
@@ -20,7 +20,7 @@ public class Family_situation {
         return number;
     }
 
-    public Family_situation setNumber(Integer number) {
+    public Professional_situation setNumber(Integer number) {
         this.number = number;
 
         return this;
