@@ -4,7 +4,7 @@
 </head>
 
 <body>
-    <%@include file="partials/home.jsp"%>
+<%@include file="partials/home.jsp"%>
 </body>
 
 </html>
