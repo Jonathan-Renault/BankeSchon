@@ -1,6 +1,6 @@
-package main.src.com.bankeschon.Models;
+package com.bankeschon.Models;
 
-public class Family_situation {
+public class Family_situation extends BaseModelORM {
     private String tableName = "family_situations";
 
     private String label;
@@ -24,5 +24,10 @@ public class Family_situation {
         this.number = number;
 
         return this;
+    }
+    @Override
+    public String getTableName()
+    {
+        return this.tableName;
     }
 }

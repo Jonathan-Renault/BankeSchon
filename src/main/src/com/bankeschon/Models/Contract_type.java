@@ -1,6 +1,6 @@
-package main.src.com.bankeschon.Models;
+package com.bankeschon.Models;
 
-public class Contract_type {
+public class Contract_type extends BaseModelORM {
     private String tableName = "contract_types";
 
     private String label;
@@ -24,5 +24,10 @@ public class Contract_type {
         this.number = number;
 
         return this;
+    }
+    @Override
+    public String getTableName()
+    {
+        return this.tableName;
     }
 }

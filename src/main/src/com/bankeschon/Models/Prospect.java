@@ -1,8 +1,6 @@
-package main.src.com.bankeschon.Models;
+package com.bankeschon.Models;
 
-import java.util.UUID;
-
-public class Prospect {
+public class Prospect extends BaseModelORM {
     private String tableName = "prospects";
 
     private Integer  is_customer;
@@ -181,5 +179,10 @@ public class Prospect {
         this.updated_at = updated_at;
 
         return this;
+    }
+    @Override
+    public String getTableName()
+    {
+        return this.tableName;
     }
 }
