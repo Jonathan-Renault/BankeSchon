@@ -1,16 +1,14 @@
 package com.bankeschon.Models;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.lang.reflect.*;
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class BaseModelORM {
-    private UUID id;
+    private Integer id;
 
     private String tableName = "";
     private String insertQueryString = "INSERT INTO ";
@@ -21,14 +19,14 @@ public class BaseModelORM {
         return Character.toUpperCase(string.charAt(0)) + string.substring(1);
     }
 
-    public BaseModelORM setId(UUID id)
+    public BaseModelORM setId(Integer id)
     {
         this.id = id;
 
         return this;
     }
 
-    public UUID getId()
+    public Integer getId()
     {
         return this.id;
     }
