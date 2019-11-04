@@ -1,8 +1,6 @@
-package main.src.com.bankeschon.Models;
+package com.bankeschon.Models;
 
-import java.util.UUID;
-
-public class User {
+public class User extends BaseModelORM {
     private String tableName = "users";
 
     private String login;
@@ -59,5 +57,11 @@ public class User {
         this.updated_at = updated_at;
 
         return this;
+    }
+
+    @Override
+    public String getTableName()
+    {
+        return this.tableName;
     }
 }

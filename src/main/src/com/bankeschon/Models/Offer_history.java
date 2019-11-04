@@ -1,31 +1,29 @@
-package main.src.com.bankeschon.Models;
+package com.bankeschon.Models;
 
-import java.util.UUID;
-
-public class Offer_history {
+public class Offer_history extends BaseModelORM {
     private String tableName = "history";
 
-    private UUID id_offer;
-    private UUID id_prospect;
+    private Integer id_offer;
+    private Integer id_prospect;
     private Boolean accepted;
     private String created_at;
     private String updated_at;
 
-    public UUID getId_offer() {
+    public Integer getId_offer() {
         return id_offer;
     }
 
-    public Offer_history setId_offer(UUID id_offer) {
+    public Offer_history setId_offer(Integer id_offer) {
         this.id_offer = id_offer;
 
         return this;
     }
 
-    public UUID getId_prospect() {
+    public Integer getId_prospect() {
         return id_prospect;
     }
 
-    public Offer_history setId_prospect(UUID id_prospect) {
+    public Offer_history setId_prospect(Integer id_prospect) {
         this.id_prospect = id_prospect;
 
         return this;
@@ -59,5 +57,10 @@ public class Offer_history {
         this.updated_at = updated_at;
 
         return this;
+    }
+    @Override
+    public String getTableName()
+    {
+        return this.tableName;
     }
 }
