@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
+<<<<<<< HEAD
 Built-By: jonre
 Build-Jdk: 11.0.4
+=======
+Built-By: doria
+Build-Jdk: 1.8.0_221
+>>>>>>> 4cc96534d08263dd03e0ab8da8bf1403d19cfdc4
 
