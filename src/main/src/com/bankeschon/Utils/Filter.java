@@ -1,8 +1,8 @@
-package com.bankeschon.servlets;
+package com.bankeschon.Utils;
 
 import java.util.HashMap;
 
-public class filter {
+public class Filter {
     public static HashMap add(String operator, String col, String value) {
         HashMap _filter1 = new HashMap();
 

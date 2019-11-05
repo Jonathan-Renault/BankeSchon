@@ -1,4 +1,4 @@
-package com.bankeschon.servlets;
+package com.bankeschon.Utils;
 
 import com.bankeschon.Models.BaseModelORM;
 import java.sql.*;
@@ -32,7 +32,7 @@ public class Database {
         }
     }
 
-    private static void close()
+    public static void close()
     {
         if( dbConnection != null )
         {
