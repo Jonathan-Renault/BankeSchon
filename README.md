@@ -51,10 +51,10 @@ Jusqu'à la fin / Until finished
 
 ## Authors
 
-* **Nicolas Dufresne** - *Développeur* - [Lien Git](https://github.com/Jonathan-Renault)
+* **Nicolas Dufresne** - *Développeur* - [Lien Git](https://github.com/NicolasDufresne)
 
 * **Dorian Legros** - *Développeur* - [Lien Git](https://github.com/DorianLegros)
 
-* **Yamna Melki** - *Développeur* - [Lien Git](https://github.com/NicolasDufresne)
+* **Yamna Melki** - *Développeur* - [Lien Git](https://github.com/Melkibson)
 
-* **Jonathan Renault** - *Responsable de Projet* - [Lien Git](https://github.com/Melkibson)
+* **Jonathan Renault** - *Responsable de Projet* - [Lien Git](https://github.com/Jonathan-Renault)
