@@ -15,7 +15,8 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><img src="img/bankeschon_logo.svg" width="30"
                                                                         height="30"
-                                                                        class="d-inline-block align-top" alt=""></h5>
+                                                                        class="d-inline-block align-top" alt="">&nbsp;
+                        Contact</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -24,7 +25,6 @@
                     <!------------------------------------ Form contact admin ------------------------------------->
                     <div id="form-contact">
                         <form>
-                            <h1 class="form-contact-h1">Contact</h1>
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Contacter</label>
                                 <select class="form-control" id="exampleFormControlSelect1">

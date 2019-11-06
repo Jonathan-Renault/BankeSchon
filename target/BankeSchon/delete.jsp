@@ -8,45 +8,6 @@
     <button type="button" class="btn btn-link"><span class="retour">Retour</span></button>
 </a>
 
-<!------------------------------------------------- Modal contact ------------------------------------------------->
-<div class="container-fluid">
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!------------------------------------ Form contact admin ------------------------------------->
-                    <div id="form-contact">
-                        <form>
-                            <h1 class="form-contact-h1">Contact Admin/Resp</h1>
-                            <div class="form-group">
-                                <label for="exampleFormControlSelect1">Contacter</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
-                                    <option>Administrateur</option>
-                                    <option>Responsable</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Quel est votre problème ? </label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Envoyer</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="container interface">
         <h1 class="h1-prospect">Suppression d'un utilisateur</h1>
 
