@@ -7,13 +7,13 @@ import java.util.List;
 
 public class Database {
 
-    private static String database = System.getenv("database");
-    private static String user = System.getenv("user");
-    private static String password = System.getenv("password");
+    //private static String database = System.getenv("database");
+    //private static String user = System.getenv("user");
+    //private static String password = System.getenv("password");
     private static Connection dbConnection = null;
-    //private static String database  = "DBNAMES";
-    //private static String user      = "root";
-    //private static String password  = "";
+    private static String database  = "bankeschon";
+    private static String user      = "postgres";
+    private static String password  = "postgres";
 
     public static void connect()
     {
@@ -22,8 +22,8 @@ public class Database {
             System.out.println("[DB] Entering Database Connect.");
             try
             {
-                Class.forName("org.postgresql.jdbc.Driver");
-                dbConnection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + database, user, password);
+                Class.forName("org.postgresql.Driver");
+                dbConnection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + database , user, password);
             }
             catch(Exception e)
             {
