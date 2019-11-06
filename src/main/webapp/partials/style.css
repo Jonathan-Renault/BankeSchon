@@ -2,6 +2,18 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 
+
+html,
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+
+.card {
+    max-width: 540px;
+}
+
 .btn span {
     cursor: pointer;
     display: inline-block;
@@ -104,13 +116,6 @@
     --font-color: #e1e1ff;
     --bg-color: #161625;
     --heading-color: #818cab;
-}
-
-
-html,
-body {
-    background-color: var(--bg-color);
-    color: var(--font-color);
 }
 
 .table-details td, .table-details th {
@@ -346,10 +351,33 @@ input:checked + .slider:before {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
+@media screen and (max-width: 1050px) {
+    .input-search {
+        width: 63%;
+    }
+}
 
 @media screen and (max-width: 640px) {
     .form-navbar-search {
         width: 100%;
+    }
+    .float {
+        width: 90%;
+        float: none;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .input-search {
+        width: 63%;
+    }
+    .table-part1 {
+        width: 100%;
+    }
+    .table-part2 {
+        width: 100%;
+    }
+    .btn {
+        padding: 0;
     }
 }
 

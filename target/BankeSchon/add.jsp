@@ -10,7 +10,7 @@
 
 <div id="form-global-add">
     <form>
-        <img src="img/bankeschon_logo.svg" width="80" height="80"
+        <img src="img/bankeschon_logo.svg" width="30" height="30"
              class="d-inline-block align-top" alt="Logo">
         <h2 class="text-center">Créer un nouvel utilisateur</h2>
         <div class="form-group">
