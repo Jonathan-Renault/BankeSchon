@@ -37,6 +37,8 @@
 </div>
 <!-------------------------------------------------- Dark mode -------------------------------------------------------->
 <%@include file="partials/dark_mode.jsp" %>
-
+<script>
+    alert("Message à afficher");
+</script>
 </body>
 </html>
