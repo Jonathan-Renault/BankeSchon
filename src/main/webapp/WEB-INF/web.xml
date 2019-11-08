@@ -4,12 +4,26 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
   <servlet>
     <servlet-name>Test_BDD</servlet-name>
     <servlet-class>com.bankeschon.Servlet.Test_bdd</servlet-class>
   </servlet>
+
+  <servlet>
+    <servlet-name>Optimisation_algorithm</servlet-name>
+    <servlet-class>com.bankeschon.Servlet.Optimisation_algorithm</servlet-class>
+  </servlet>
+
+
   <servlet-mapping>
     <servlet-name>Test_BDD</servlet-name>
     <url-pattern>/toto</url-pattern>
   </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Optimisation_algorithm</servlet-name>
+    <url-pattern>/optimisation</url-pattern>
+  </servlet-mapping>
+
 </web-app>
