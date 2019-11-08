@@ -82,12 +82,12 @@
                         <input class="form-control" type="number" value="1521" id="exampleInputSalaire">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputName">Dernier appel</label>
+                        <label for="exampleInputLastCall">Dernier appel</label>
                         <input type="text" class="form-control disabled" id="exampleInputLastCall"
                                aria-describedby="emailHelp"
                                placeholder="11:39 04/11/2019" disabled>
                     </div>
-                    <h8>Acceptez-vous d'être rappelé pour de prochaines offres ?</h8>
+                    <h5>Acceptez-vous d'être rappelé pour de prochaines offres ?</h5>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios"
                                id="exampleRadios1"
@@ -106,7 +106,7 @@
                     </div>
                     <br/>
 
-                    <h8>Quels sont les types de produit déjà proposé ?</h8>
+                    <h5>Quels sont les types de produit déjà proposé ?</h5>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" id="inlineCheckboxCompteCourant"
                                value="option1">
@@ -174,7 +174,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><img src="img/bankeschon_logo.svg" width="30"
+                <h5 class="modal-title"><img src="img/bankeschon_logo.svg" width="30"
                                                                     height="30"
                                                                     class="d-inline-block align-top" alt="">&nbsp;
                     Détails du client</h5>
@@ -299,7 +299,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><img src="img/bankeschon_logo.svg" width="30"
+                <h5 class="modal-title"><img src="img/bankeschon_logo.svg" width="30"
                                                                     height="30"
                                                                     class="d-inline-block align-top" alt="">&nbsp;
                     Détails des offres</h5>
@@ -330,7 +330,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><img src="img/bankeschon_logo.svg" width="30"
+                <h5 class="modal-title"><img src="img/bankeschon_logo.svg" width="30"
                                                                     height="30"
                                                                     class="d-inline-block align-top" alt="">&nbsp;
                     Détails des dépenses</h5>

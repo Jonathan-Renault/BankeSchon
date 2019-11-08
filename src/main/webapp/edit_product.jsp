@@ -94,11 +94,13 @@
                     <div class="form-group">
                         <label for="exampleInputRecommandedAge">Plage d'âge recommandé</label>
                         <input class="form-control" type="number" value="18" id="exampleInputRecommandedAge">
+                        <label for="exampleInputRecommandedAge2"></label>
                         <input class="form-control" type="number" value="60" id="exampleInputRecommandedAge2">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputRecommandedSalary">Salaire Brut recommandé</label>
                         <input class="form-control" type="number" value="1270" id="exampleInputRecommandedSalary">
+                        <label for="exampleInputRecommandedSalary2"></label>
                         <input class="form-control" type="number" value="2000" id="exampleInputRecommandedSalary2">
                     </div>
                     <div class="form-group">

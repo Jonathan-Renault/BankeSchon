@@ -13,6 +13,7 @@
 <head>
 
     <%@include file="partials/head.jsp" %>
+    <title>BankeSchön</title>
 
 </head>
 
@@ -37,8 +38,6 @@
 </div>
 <!-------------------------------------------------- Dark mode -------------------------------------------------------->
 <%@include file="partials/dark_mode.jsp" %>
-<script>
-    alert("Message à afficher");
-</script>
+
 </body>
 </html>

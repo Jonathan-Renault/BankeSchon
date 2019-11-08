@@ -13,6 +13,7 @@
 <head>
 
     <%@include file="partials/head.jsp" %>
+    <title>BankeSchön</title>
 
 </head>
 

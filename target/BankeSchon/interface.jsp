@@ -100,7 +100,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><img src="img/bankeschon_logo.svg" width="30"
+                    <h5 class="modal-title"><img src="img/bankeschon_logo.svg" width="30"
                                                                         height="30"
                                                                         class="d-inline-block align-top" alt="">&nbsp;
                         Modifier ce profil</h5>
@@ -242,12 +242,12 @@
     <!------------------------------------------------- Modal validation ------------------------------------------------->
 
     <div class="modal fade" id="exampleModalValidation" tabindex="-1" role="dialog"
-         aria-labelledby="exampleModalLabel"
+         aria-labelledby=""
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><img src="img/bankeschon_logo.svg" width="30"
+                    <h5 class="modal-title" ><img src="img/bankeschon_logo.svg" width="30"
                                                                         height="30"
                                                                         class="d-inline-block align-top" alt="">&nbsp;
                         Inscrire ce prospect</h5>
@@ -259,30 +259,30 @@
                     <!------------------------------------ Form edit profil ------------------------------------->
                     <form>
                         <div class="form-group">
-                            <label for="exampleInputName">Nom</label>
-                            <input type="email" class="form-control" id="exampleInputName"
+                            <label for="exampleInputNameValidation">Nom</label>
+                            <input type="email" class="form-control" id="exampleInputNameValidation"
                                    aria-describedby="emailHelp"
                                    placeholder="Nom">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputSurname">Prénom</label>
-                            <input type="email" class="form-control" id="exampleInputSurname"
+                            <label for="exampleInputSurnameValidation">Prénom</label>
+                            <input type="email" class="form-control" id="exampleInputSurnameValidation"
                                    aria-describedby="emailHelp"
                                    placeholder="Prénom">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputTel">Téléphone</label>
+                            <label for="exampleInputTelValidation">Téléphone</label>
                             <input class="form-control" type="tel" value="1-(555)-555-5555"
-                                   id="exampleInputTel">
+                                   id="exampleInputTelValidation">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputBirthday">Date de naissance</label>
+                            <label for="exampleInputBirthdayValidation">Date de naissance</label>
                             <input class="form-control" type="date" value="1998-08-19"
-                                   id="exampleInputBirthday">
+                                   id="exampleInputBirthdayValidation">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFamilySituation">Situation familiale</label>
-                            <select class="form-control" id="exampleInputFamilySituation">
+                            <label for="exampleInputFamilySituationValidation">Situation familiale</label>
+                            <select class="form-control" id="exampleInputFamilySituationValidation">
                                 <option>Célibataire</option>
                                 <option>Marié</option>
                                 <option>Divorcé</option>
@@ -291,8 +291,8 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputProSituation">Situation professionnelle</label>
-                            <select class="form-control" id="exampleInputProSituation">
+                            <label for="exampleInputProSituationValidation">Situation professionnelle</label>
+                            <select class="form-control" id="exampleInputProSituationValidation">
                                 <option>Demandeur d'emploi</option>
                                 <option>Étudiant</option>
                                 <option>Indépendant</option>
@@ -328,12 +328,12 @@
 </div>
 
 <!------------------------------------------------- Modal Depense Details ------------------------------------------------->
-<div class="modal fade" id="exampleModalDepenseDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="exampleModalDepenseDetails" tabindex="-1" role="dialog" aria-labelledby=""
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><img src="img/bankeschon_logo.svg" width="30"
+                <h5 class="modal-title" ><img src="img/bankeschon_logo.svg" width="30"
                                                                     height="30"
                                                                     class="d-inline-block align-top" alt="">&nbsp;
                     Détails des dépenses</h5>
@@ -356,12 +356,12 @@
     </div>
 </div>
 <!------------------------------------------------- Modal Offer Details ------------------------------------------------->
-<div class="modal fade" id="exampleModalOfferDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="exampleModalOfferDetails" tabindex="-1" role="dialog" aria-labelledby=""
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><img src="img/bankeschon_logo.svg" width="30"
+                <h5 class="modal-title"><img src="img/bankeschon_logo.svg" width="30"
                                                                     height="30"
                                                                     class="d-inline-block align-top" alt="">&nbsp;
                     Détails des offres</h5>
