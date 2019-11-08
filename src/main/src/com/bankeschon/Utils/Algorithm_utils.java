@@ -1,6 +1,7 @@
 package com.bankeschon.Utils;
 
 import com.bankeschon.Models.BaseModelORM;
+import com.bankeschon.Models.Offer;
 import com.bankeschon.Models.Prospect;
 import com.bankeschon.Models.Offer_history;
 
@@ -31,5 +32,17 @@ public class Algorithm_utils {
         result = Database.select(_object, fields, filter);
 
         return result.isEmpty();
+    }
+
+    public boolean checkCorrectAge (Integer prospect_id, String offer_id) {
+        List result;
+        BaseModelORM _objectProspect = new Prospect();
+        BaseModelORM _objectOffer = new Offer();
+        ArrayList<String> fieldsProspect = new ArrayList<String>();
+        ArrayList<String> filterProspect = new ArrayList<String>();
+        ArrayList<String> fieldsOffer = new ArrayList<String>();
+        ArrayList<String> filterOffer = new ArrayList<String>();
+        fieldsProspect.add("birthdate");
+        fieldsOffer.add("");
     }
 }
