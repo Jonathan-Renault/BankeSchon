@@ -9,15 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Algorithm_utils {
-    public List lastProspectModified (Integer id) {
-        BaseModelORM _object = new Prospect();
-        _object.getTableName();
-        List prospect;
+    public Prospect lastProspectModified (Integer id) {
+        Prospect _object = new Prospect();
+        Prospect prospect = new Prospect();
+        List prospects;
         ArrayList<String> fields = new ArrayList<String>();
-        ArrayList<String> filter = new ArrayList<String>();
+        ArrayList filters = new ArrayList<String>();
+        Filter filter = new Filter();
         fields.add("*");
-        filter.add("id =" + id);
-        prospect = Database.select(_object, fields, filter);
+        filters.add(filter.add("=","id", id));
+        prospects = Database.select(_object, fields, filters);
+        prospect = (Prospect) prospects.get(0);
+
         return prospect;
     }
 
@@ -34,7 +37,7 @@ public class Algorithm_utils {
         return result.isEmpty();
     }
 
-    public boolean checkCorrectAge (Integer prospect_id, String offer_id) {
+    /*public boolean checkCorrectAge (Integer prospect_id, String offer_id) {
         List result;
         BaseModelORM _objectProspect = new Prospect();
         BaseModelORM _objectOffer = new Offer();
@@ -44,5 +47,5 @@ public class Algorithm_utils {
         ArrayList<String> filterOffer = new ArrayList<String>();
         fieldsProspect.add("birthdate");
         fieldsOffer.add("");
-    }
+    }*/
 }

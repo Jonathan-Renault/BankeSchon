@@ -6,10 +6,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 import com.bankeschon.Models.Prospect;
 import com.bankeschon.Models.Offer;
 import com.bankeschon.Models.Offer_history;
+
+import com.bankeschon.Utils.Algorithm_utils;
 
 @WebServlet(name = "Optimisation_algorithm")
 public class Optimisation_algorithm extends HttpServlet {
@@ -18,11 +21,15 @@ public class Optimisation_algorithm extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Algorithm_utils algo = new Algorithm_utils();
         // définition des variables nécessaires au déroulé de l'algorithme
+        Integer id_prospect = 3;
+        Prospect prospect;
+
 
         // récupere le prospect qui vient d'être modifié
-
-
+        prospect = algo.lastProspectModified(id_prospect);
+        System.out.println(prospect);
         // pour chaque offre présente dans la bdd
 
 
