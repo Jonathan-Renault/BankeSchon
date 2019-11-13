@@ -78,7 +78,7 @@ public class Database {
 
                 System.out.println("[DB] Got last inserted ID. Setting it in object ( maybe for future 'UPDATE' query ? )");
 
-                _object.setId(_newId);
+                /*_object.setId(_newId);*/
             }
             catch (SQLException e)
             {

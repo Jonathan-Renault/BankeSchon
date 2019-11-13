@@ -3,8 +3,19 @@ package com.bankeschon.Models;
 public class Offer_proposed extends BaseModelORM {
     private String tableName = "offers_proposed";
 
+    private Integer id;
     private Integer id_offer;
     private Integer id_prospect;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Offer_proposed setId(Integer id) {
+        this.id = id;
+
+        return this;
+    }
 
     public Integer getId_offer() {
         return id_offer;

@@ -3,6 +3,7 @@ package com.bankeschon.Models;
 public class Prospect extends BaseModelORM {
     private String tableName = "prospects";
 
+    private Integer  id;
     private Integer  is_customer;
     private String   name;
     private String   surname;
@@ -20,6 +21,15 @@ public class Prospect extends BaseModelORM {
     private String   created_at; // à convertir en timestamp
     private String   updated_at; // à convertir en timestamp
 
+    public Integer getId() {
+        return id;
+    }
+
+    public Prospect setId(Integer id) {
+        this.id = id;
+
+        return this;
+    }
 
     public Integer getIs_customer() {
         return is_customer;

@@ -29,18 +29,19 @@ public class Optimisation_algorithm extends HttpServlet {
 
         // récupere le prospect qui vient d'être modifié
         prospect = algo.lastProspectModified(id_prospect);
-        /*System.out.println(prospect.getMail());     //test, à supprimer*/
 
         //récupère toutes les offres existantes, pour commencer la comparaison
         List offers = algo.getAllOffers();
 
         // pour chaque offre présente dans la bdd
-        for (Object offer: offers) {
-            System.out.println(offer);
+        for (Object indexed_offer: offers) {
+            Integer score;
             // vérifie dans l'historique des offres proposées si l'offre n'a pas déjà été souscrite
-            /*if (algo.checkOffersProposed(id_prospect, offer)) { }*/
-                // si oui, le score de l'offre passe à 0, et passage à l'offre suivant
-
+            Offer offer = (Offer) indexed_offer;
+            if (algo.checkOffersProposed(id_prospect, offer.getId())) {
+                // si oui, passage à l'offre suivant
+                continue;
+            }
 
             // vérifie si l'age du prospect est bien compris entre l'age maximum et minimum
 

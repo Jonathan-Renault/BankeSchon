@@ -3,6 +3,7 @@ package com.bankeschon.Models;
 public class Offer extends BaseModelORM {
     private String tableName = "offers";
 
+    private Integer id;
     private String offer_name;
     private Integer priority; // de 0 à 3
     private Integer minimum_age;
@@ -27,6 +28,15 @@ public class Offer extends BaseModelORM {
     private String   created_at; // à convertir en timestamp
     private String   updated_at; // à convertir en timestamp
 
+    public Integer getId() {
+        return id;
+    }
+
+    public Offer setId(Integer id) {
+        this.id = id;
+
+        return this;
+    }
 
     public String getOffer_name() {
         return offer_name;

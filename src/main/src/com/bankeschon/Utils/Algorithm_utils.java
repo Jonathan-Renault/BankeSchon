@@ -1,6 +1,5 @@
 package com.bankeschon.Utils;
 
-import com.bankeschon.Models.BaseModelORM;
 import com.bankeschon.Models.Offer;
 import com.bankeschon.Models.Prospect;
 import com.bankeschon.Models.Offer_history;
@@ -11,7 +10,7 @@ import java.util.List;
 public class Algorithm_utils {
     public Prospect lastProspectModified (Integer id) {
         Prospect _object = new Prospect();
-        Prospect prospect = new Prospect();
+        Prospect prospect;
         List prospects;
         ArrayList<String> fields = new ArrayList<String>();
         ArrayList filters = new ArrayList<String>();
@@ -24,7 +23,7 @@ public class Algorithm_utils {
         return prospect;
     }
 
-    public List getAllOffers () {
+    public List<Offer> getAllOffers () {
         Offer _object = new Offer();
         List offers;
         ArrayList<String> fields = new ArrayList<String>();
@@ -33,8 +32,13 @@ public class Algorithm_utils {
         fields.add("*");
         filters.add(filter.add("=", "1", "1"));
         offers = Database.select(_object, fields, filters);
-
+        Offer offer = (Offer) offers.get(0);
+        System.out.println(offer.getCreated_at());
         return offers;
+    }
+
+    public void findAge () {
+
     }
 
     public boolean checkOffersProposed (Integer prospect_id, Integer offer_id) {
@@ -53,14 +57,6 @@ public class Algorithm_utils {
     }
 
     /*public boolean checkCorrectAge (Integer prospect_id, String offer_id) {
-        List result;
-        BaseModelORM _objectProspect = new Prospect();
-        BaseModelORM _objectOffer = new Offer();
-        ArrayList<String> fieldsProspect = new ArrayList<String>();
-        ArrayList<String> filterProspect = new ArrayList<String>();
-        ArrayList<String> fieldsOffer = new ArrayList<String>();
-        ArrayList<String> filterOffer = new ArrayList<String>();
-        fieldsProspect.add("birthday");
-        fieldsOffer.add("");
+
     }*/
 }
