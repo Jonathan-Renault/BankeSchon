@@ -29,6 +29,7 @@ public class Optimisation_algorithm extends HttpServlet {
 
         // récupere le prospect qui vient d'être modifié
         prospect = algo.lastProspectModified(id_prospect);
+        Integer age_prospect = algo.findAge(prospect.getBirthday());
 
         //récupère toutes les offres existantes, pour commencer la comparaison
         List offers = algo.getAllOffers();

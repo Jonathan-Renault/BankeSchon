@@ -3,9 +3,13 @@ package com.bankeschon.Utils;
 import com.bankeschon.Models.Offer;
 import com.bankeschon.Models.Prospect;
 import com.bankeschon.Models.Offer_history;
+import sun.util.resources.LocaleData;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Algorithm_utils {
     public Prospect lastProspectModified (Integer id) {
@@ -37,8 +41,12 @@ public class Algorithm_utils {
         return offers;
     }
 
-    public void findAge () {
-
+    public Integer findAge (String birthday) {
+        String[] values = birthday.split("-", 0);
+        LocalDate birthdate = LocalDate.of(Integer.parseInt(values[0]), Integer.parseInt(values[1]), Integer.parseInt(values[2]));
+        LocalDate actualDate = LocalDate.now();
+        Period difference = Period.between(birthdate, actualDate);
+        return difference.getYears();
     }
 
     public boolean checkOffersProposed (Integer prospect_id, Integer offer_id) {
