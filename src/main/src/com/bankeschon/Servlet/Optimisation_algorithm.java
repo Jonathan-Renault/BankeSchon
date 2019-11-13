@@ -27,17 +27,18 @@ public class Optimisation_algorithm extends HttpServlet {
         Integer id_prospect = 3;        //test, à modifier pour récupérer le vrai id
         Prospect prospect;
 
-
         // récupere le prospect qui vient d'être modifié
         prospect = algo.lastProspectModified(id_prospect);
         /*System.out.println(prospect.getMail());     //test, à supprimer*/
 
+        //récupère toutes les offres existantes, pour commencer la comparaison
+        List offers = algo.getAllOffers();
 
         // pour chaque offre présente dans la bdd
-
-
+        for (Object offer: offers) {
+            System.out.println(offer);
             // vérifie dans l'historique des offres proposées si l'offre n'a pas déjà été souscrite
-
+            /*if (algo.checkOffersProposed(id_prospect, offer)) { }*/
                 // si oui, le score de l'offre passe à 0, et passage à l'offre suivant
 
 
@@ -52,8 +53,8 @@ public class Optimisation_algorithm extends HttpServlet {
             // vérifie que le score de l'offre soit supérieur à 5
 
                 // si oui, le score est ajouté au tableau scores, avec comme index le nom de l'offre
+        }
 
-
-            // classe le tableau scores du plus haut entier au plus bas
+        // classe le tableau scores du plus haut entier au plus bas
     }
 }

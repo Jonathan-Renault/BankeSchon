@@ -24,9 +24,22 @@ public class Algorithm_utils {
         return prospect;
     }
 
+    public List getAllOffers () {
+        Offer _object = new Offer();
+        List offers;
+        ArrayList<String> fields = new ArrayList<String>();
+        ArrayList filters = new ArrayList<String>();
+        Filter filter = new Filter();
+        fields.add("*");
+        filters.add(filter.add("=", "1", "1"));
+        offers = Database.select(_object, fields, filters);
+
+        return offers;
+    }
+
     public boolean checkOffersProposed (Integer prospect_id, Integer offer_id) {
         Offer_history _object = new Offer_history();
-        List result;
+        List<Offer> result;
         ArrayList<String> fields = new ArrayList<String>();
         ArrayList filters = new ArrayList<String>();
         Filter filter = new Filter();
@@ -39,7 +52,7 @@ public class Algorithm_utils {
         return result.isEmpty();
     }
 
-    public boolean checkCorrectAge (Integer prospect_id, String offer_id) {
+    /*public boolean checkCorrectAge (Integer prospect_id, String offer_id) {
         List result;
         BaseModelORM _objectProspect = new Prospect();
         BaseModelORM _objectOffer = new Offer();
@@ -47,7 +60,7 @@ public class Algorithm_utils {
         ArrayList<String> filterProspect = new ArrayList<String>();
         ArrayList<String> fieldsOffer = new ArrayList<String>();
         ArrayList<String> filterOffer = new ArrayList<String>();
-        fieldsProspect.add("birthdate");
+        fieldsProspect.add("birthday");
         fieldsOffer.add("");
-    }
+    }*/
 }
