@@ -22,14 +22,17 @@ public class Optimisation_algorithm extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Algorithm_utils algo = new Algorithm_utils();
+
         // définition des variables nécessaires au déroulé de l'algorithme
-        Integer id_prospect = 3;
+        Integer id_prospect = 3;        //test, à modifier pour récupérer le vrai id
         Prospect prospect;
 
 
         // récupere le prospect qui vient d'être modifié
         prospect = algo.lastProspectModified(id_prospect);
-        System.out.println(prospect);
+        /*System.out.println(prospect.getMail());     //test, à supprimer*/
+
+
         // pour chaque offre présente dans la bdd
 
 

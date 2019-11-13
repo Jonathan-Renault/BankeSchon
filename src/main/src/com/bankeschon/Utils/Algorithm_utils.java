@@ -24,20 +24,22 @@ public class Algorithm_utils {
         return prospect;
     }
 
-    public boolean checkOffersProposed (Integer prospect_id, String offer_id) {
+    public boolean checkOffersProposed (Integer prospect_id, Integer offer_id) {
+        Offer_history _object = new Offer_history();
         List result;
-        BaseModelORM _object = new Offer_history();
-        _object.getTableName();
         ArrayList<String> fields = new ArrayList<String>();
-        ArrayList<String> filter = new ArrayList<String>();
+        ArrayList filters = new ArrayList<String>();
+        Filter filter = new Filter();
         fields.add("accepted");
-        filter.add("id_prospect =" + prospect_id + "AND accepted = true AND id_offer =" + offer_id);
-        result = Database.select(_object, fields, filter);
+        filters.add(filter.add("=","id_prospect", prospect_id));
+        filters.add(filter.add("=","accepted", true));
+        filters.add(filter.add("=","id_offer", offer_id));
+        result = Database.select(_object, fields, filters);
 
         return result.isEmpty();
     }
 
-    /*public boolean checkCorrectAge (Integer prospect_id, String offer_id) {
+    public boolean checkCorrectAge (Integer prospect_id, String offer_id) {
         List result;
         BaseModelORM _objectProspect = new Prospect();
         BaseModelORM _objectOffer = new Offer();
@@ -47,5 +49,5 @@ public class Algorithm_utils {
         ArrayList<String> filterOffer = new ArrayList<String>();
         fieldsProspect.add("birthdate");
         fieldsOffer.add("");
-    }*/
+    }
 }

@@ -485,6 +485,16 @@ public class BaseModelORM {
                     statement.setString (i,  (String) classMethod.invoke(this) );
                 }
 
+                if( field.getType() == Boolean.class )
+                {
+                    statement.setBoolean (i,  (Boolean) classMethod.invoke(this) );
+                }
+
+                if( field.getType() == Timestamp.class )
+                {
+                    statement.setTimestamp (i,  (Timestamp) classMethod.invoke(this) );
+                }
+
                 i = i + 1;
             }
         }
