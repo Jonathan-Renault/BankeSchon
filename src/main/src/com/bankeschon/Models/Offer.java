@@ -88,11 +88,11 @@ public class Offer extends BaseModelORM {
         return this;
     }
 
-    public String getSalary() {
+    public String getRecommanded_salary() {
         return recommanded_salary;
     }
 
-    public Offer setSalary(String recommanded_salary) {
+    public Offer setRecommanded_salary(String recommanded_salary) {
         this.recommanded_salary = recommanded_salary;
 
         return this;

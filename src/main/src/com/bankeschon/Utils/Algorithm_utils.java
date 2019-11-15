@@ -76,4 +76,48 @@ public class Algorithm_utils {
         result = Database.select(_object,fields,filters);
         return (result.get(0).getMinimum_age() <= prospect_age) && (result.get(0).getMaximum_age() >= prospect_age);
     }
+
+    public Integer checkOfferInfoParameter (Prospect prospect,Integer score, String column, Integer id_offer) {
+        Offer _object = new Offer();
+        List<Offer> result;
+        ArrayList<String> fields = new ArrayList<String>();
+        ArrayList filters = new ArrayList<String>();
+        Filter filter = new Filter();
+        fields.add("recommanded_"+column);
+        filters.add(filter.add("=", "id", id_offer));
+        result = Database.select(_object, fields, filters);
+
+        if (column.equals("age") || column.equals("salary")) {
+            switch (column) {
+                case "age":
+                    String[] recommandedAges = result.get(0).getRecommanded_age().split("-", 2);
+                    if (prospect.age <= Integer.parseInt(recommandedAges[0]) && prospect.age >= Integer.parseInt(recommandedAges[1]))
+                        return score+1;
+                    else
+                        return score;
+
+                case "salary":
+                    String[] recommandedSalaries = result.get(0).getRecommanded_salary().split("-", 2);
+                    if (prospect.getSalary() <= Integer.parseInt(recommandedSalaries[0]) && prospect.getSalary() >= Integer.parseInt(recommandedSalaries[1]))
+                        return score+1;
+                    else
+                        return score;
+            }
+        } else if (column.equals("familial_situation") || column.equals("pro_situation")) {
+            switch (column) {
+                case "familial_situation":
+                    if (prospect.getFamily_situation().equals(result.get(0).getRecommanded_familial_situation()))
+                        return score+1;
+                    else
+                        return score;
+                case "pro_situation":
+                    if (prospect.getProfessional_situation().equals(result.get(0).getRecommanded_pro_situation()))
+                        return score+1;
+                    else
+                        return score;
+            }
+        } else
+            System.out.println("Erreur lors de la comparaison des infos client avec l'offre en cours (mauvais nom de colonne");
+        return score;
+    }
 }

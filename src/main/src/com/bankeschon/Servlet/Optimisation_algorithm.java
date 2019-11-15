@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.List;
 
 import com.bankeschon.Models.Prospect;
@@ -29,7 +30,7 @@ public class Optimisation_algorithm extends HttpServlet {
 
         // récupere le prospect qui vient d'être modifié
         prospect = algo.lastProspectModified(id_prospect);
-        Integer age_prospect = algo.findAge(prospect.getBirthday());
+        prospect.age = algo.findAge(prospect.getBirthday());
 
         //récupère toutes les offres existantes, pour commencer la comparaison
         List offers = algo.getAllOffers();
@@ -45,13 +46,14 @@ public class Optimisation_algorithm extends HttpServlet {
             }
 
             // vérifie si l'age du prospect est bien compris entre l'age maximum et minimum
-            if (!algo.checkCorrectAge(age_prospect, offer.getId())) {
+            if (!algo.checkCorrectAge(prospect.age, offer.getId())) {
                 // si oui, passage à l'offre suivant
                 continue;
             }
 
             // vérifie les paramètres recommandés, pour incrémenter, décrementer ou laisser tel quel score
-
+            String[] spendsRecommanded = {"rent", "insurance", "health", "car", "transport", "communication", "hobby", "food", "daily"};
+            String[] informationsRecommanded = {"age", "salary", "familial_situation", "pro_situation"};
 
             // vérifie que le score de l'offre soit supérieur à 5
 

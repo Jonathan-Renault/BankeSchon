@@ -21,6 +21,8 @@ public class Prospect extends BaseModelORM {
     private String   created_at; // à convertir en timestamp
     private String   updated_at; // à convertir en timestamp
 
+    public Integer  age;
+
     public Integer getId() {
         return id;
     }
