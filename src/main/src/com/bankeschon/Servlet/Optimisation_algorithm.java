@@ -39,15 +39,16 @@ public class Optimisation_algorithm extends HttpServlet {
             Integer score;
             // vérifie dans l'historique des offres proposées si l'offre n'a pas déjà été souscrite
             Offer offer = (Offer) indexed_offer;
-            if (algo.checkOffersProposed(id_prospect, offer.getId())) {
+            if (!algo.checkOffersProposed(id_prospect, offer.getId())) {
                 // si oui, passage à l'offre suivant
                 continue;
             }
 
             // vérifie si l'age du prospect est bien compris entre l'age maximum et minimum
-
-                // si oui, le score de l'offre passe à 0
-
+            if (!algo.checkCorrectAge(age_prospect, offer.getId())) {
+                // si oui, passage à l'offre suivant
+                continue;
+            }
 
             // vérifie les paramètres recommandés, pour incrémenter, décrementer ou laisser tel quel score
 

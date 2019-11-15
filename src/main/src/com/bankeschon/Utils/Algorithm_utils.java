@@ -64,7 +64,16 @@ public class Algorithm_utils {
         return result.isEmpty();
     }
 
-    /*public boolean checkCorrectAge (Integer prospect_id, String offer_id) {
-
-    }*/
+    public boolean checkCorrectAge (Integer prospect_age, Integer offer_id) {
+        Offer _object = new Offer();
+        List<Offer> result;
+        ArrayList<String> fields = new ArrayList<String>();
+        ArrayList filters = new ArrayList<String>();
+        Filter filter = new Filter();
+        fields.add("minimum_age");
+        fields.add("maximum_age");
+        filters.add(filter.add("=", "id", offer_id));
+        result = Database.select(_object,fields,filters);
+        return (result.get(0).getMinimum_age() <= prospect_age) && (result.get(0).getMaximum_age() >= prospect_age);
+    }
 }
