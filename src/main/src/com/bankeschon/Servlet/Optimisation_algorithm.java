@@ -26,6 +26,7 @@ public class Optimisation_algorithm extends HttpServlet {
 
         // définition des variables nécessaires au déroulé de l'algorithme
         Integer id_prospect = 3;        //test, à modifier pour récupérer le vrai id
+        Integer score = 0;
         Prospect prospect;
 
         // récupere le prospect qui vient d'être modifié
@@ -37,7 +38,6 @@ public class Optimisation_algorithm extends HttpServlet {
 
         // pour chaque offre présente dans la bdd
         for (Object indexed_offer: offers) {
-            Integer score;
             // vérifie dans l'historique des offres proposées si l'offre n'a pas déjà été souscrite
             Offer offer = (Offer) indexed_offer;
             if (!algo.checkOffersProposed(id_prospect, offer.getId())) {
@@ -55,6 +55,13 @@ public class Optimisation_algorithm extends HttpServlet {
             String[] spendsRecommanded = {"rent", "insurance", "health", "car", "transport", "communication", "hobby", "food", "daily"};
             String[] informationsRecommanded = {"age", "salary", "familial_situation", "pro_situation"};
 
+            for (String s : informationsRecommanded) {
+                score = algo.checkOfferInfoParameter(prospect, score, s, offer.getId());
+            }
+
+            for (String s: spendsRecommanded) {
+                score = algo.checkOfferSpendsParameter();
+            }
             // vérifie que le score de l'offre soit supérieur à 5
 
                 // si oui, le score est ajouté au tableau scores, avec comme index le nom de l'offre

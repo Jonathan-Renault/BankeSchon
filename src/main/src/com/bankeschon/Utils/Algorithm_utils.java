@@ -120,4 +120,9 @@ public class Algorithm_utils {
             System.out.println("Erreur lors de la comparaison des infos client avec l'offre en cours (mauvais nom de colonne");
         return score;
     }
+
+    public Integer checkOfferSpendsParameter(Prospect prospect, Integer score, String column, Integer id_offer) {
+
+        return score;
+    }
 }
