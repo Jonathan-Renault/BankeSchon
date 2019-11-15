@@ -20,7 +20,7 @@
 <body>
 
 <div id="form-global">
-    <form>
+    <form method="post" action="connexion">
         <img src="img/bankeschon_logo.svg" width="80" height="80"
              class="d-inline-block align-top" alt="Logo">
         <h2 class="text-center">Connexion</h2>

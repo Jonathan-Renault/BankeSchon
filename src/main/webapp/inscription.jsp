@@ -9,23 +9,23 @@
 </a>
 
 <div id="form-global-add">
-    <form>
+    <form method="post" action="inscription">
         <img src="img/bankeschon_logo.svg" width="30" height="30"
              class="d-inline-block align-top" alt="Logo">
         <h2 class="text-center">Créer un nouvel utilisateur</h2>
         <div class="form-group">
             <label for="exampleInputEmail1">Adresse Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
                    placeholder="Entrer Email">
         </div>
         <div class="form-group">
             <label for="exampleInputaddrole">Rôle</label>
-            <select class="form-control" id="exampleInputaddrole">
-                <option>Employé</option>
-                <option>Administrateur</option>
+            <select class="form-control" name="role" id="exampleInputaddrole">
+                <option value="1">Employé</option>
+                <option value="2">Administrateur</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Créer</button>
+        <input type="submit" value="Inscription" class="btn btn-primary"/>
     </form>
 </div>
 <!-------------------------------------------------- Dark mode -------------------------------------------------------->

@@ -7,7 +7,7 @@
 <div class="card-position">
     <!---------------------------------------------- Card add user ---------------------------------------------------->
     <div class="float">
-        <a href="add.jsp">
+        <a href="inscription.jsp">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
                     <div class="col-md-4">
