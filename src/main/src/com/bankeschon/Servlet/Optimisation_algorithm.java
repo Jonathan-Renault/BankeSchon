@@ -60,7 +60,7 @@ public class Optimisation_algorithm extends HttpServlet {
             }
 
             for (String s: spendsRecommanded) {
-                score = algo.checkOfferSpendsParameter();
+                score = algo.checkOfferSpendsParameter(prospect, score, s, offer.getId());
             }
             // vérifie que le score de l'offre soit supérieur à 5
 

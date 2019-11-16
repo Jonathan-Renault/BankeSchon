@@ -122,7 +122,135 @@ public class Algorithm_utils {
     }
 
     public Integer checkOfferSpendsParameter(Prospect prospect, Integer score, String column, Integer id_offer) {
+        String[] regularSpends = prospect.getSpendings().split("-", 3);
+        Boolean isRegular = false;
+        Offer _object = new Offer();
+        List<Offer> result;
+        ArrayList<String> fields = new ArrayList<String>();
+        ArrayList filters = new ArrayList<String>();
+        Filter filter = new Filter();
+        fields.add(column +"_spend_recommanded");
+        filters.add(filter.add("=", "id", id_offer));
+        result = Database.select(_object, fields, filters);
+        switch (column) {
+            case "rent":
+                if (regularSpends[0].equals("rent") || regularSpends[1].equals("rent") || regularSpends[2].equals("rent"))
+                    isRegular = true;
 
+                if (result.get(0).getRent_spend_recommanded() == 1) {
+                    if (isRegular)
+                        return score+1;
+                } else if (result.get(0).getRent_spend_recommanded() == 2) {
+                    if (isRegular)
+                        return score-1;
+                } else
+                    return score;
+
+            case "insurance":
+                if (regularSpends[0].equals("insurance") || regularSpends[1].equals("insurance") || regularSpends[2].equals("insurance"))
+                    isRegular = true;
+
+                if (result.get(0).getInsurance_spend_recommanded() == 1) {
+                    if (isRegular)
+                        return score+1;
+                } else if (result.get(0).getInsurance_spend_recommanded() == 2) {
+                    if (isRegular)
+                        return score-1;
+                } else
+                    return score;
+
+            case "health":
+                if (regularSpends[0].equals("health") || regularSpends[1].equals("health") || regularSpends[2].equals("health"))
+                    isRegular = true;
+
+                if (result.get(0).getHealth_spend_recommanded() == 1) {
+                    if (isRegular)
+                        return score+1;
+                } else if (result.get(0).getHealth_spend_recommanded() == 2) {
+                    if (isRegular)
+                        return score-1;
+                } else
+                    return score;
+
+            case "car":
+                if (regularSpends[0].equals("car") || regularSpends[1].equals("car") || regularSpends[2].equals("car"))
+                    isRegular = true;
+
+                if (result.get(0).getCar_spend_recommanded() == 1) {
+                    if (isRegular)
+                        return score+1;
+                } else if (result.get(0).getCar_spend_recommanded() == 2) {
+                    if (isRegular)
+                        return score-1;
+                } else
+                    return score;
+
+            case "transport":
+                if (regularSpends[0].equals("transport") || regularSpends[1].equals("transport") || regularSpends[2].equals("transport"))
+                    isRegular = true;
+
+                if (result.get(0).getTransport_spend_recommanded() == 1) {
+                    if (isRegular)
+                        return score+1;
+                } else if (result.get(0).getTransport_spend_recommanded() == 2) {
+                    if (isRegular)
+                        return score-1;
+                } else
+                    return score;
+
+            case "communication":
+                if (regularSpends[0].equals("communication") || regularSpends[1].equals("communication") || regularSpends[2].equals("communication"))
+                    isRegular = true;
+
+                if (result.get(0).getCommunication_spend_recommanded() == 1) {
+                    if (isRegular)
+                        return score+1;
+                } else if (result.get(0).getCommunication_spend_recommanded() == 2) {
+                    if (isRegular)
+                        return score-1;
+                } else
+                    return score;
+
+            case "hobby":
+                if (regularSpends[0].equals("hobby") || regularSpends[1].equals("hobby") || regularSpends[2].equals("hobby"))
+                    isRegular = true;
+
+                if (result.get(0).getHobby_spend_recommanded() == 1) {
+                    if (isRegular)
+                        return score+1;
+                } else if (result.get(0).getHobby_spend_recommanded() == 2) {
+                    if (isRegular)
+                        return score-1;
+                } else
+                    return score;
+
+            case "food":
+                if (regularSpends[0].equals("food") || regularSpends[1].equals("food") || regularSpends[2].equals("food"))
+                    isRegular = true;
+
+                if (result.get(0).getFood_spend_recommanded() == 1) {
+                    if (isRegular)
+                        return score+1;
+                } else if (result.get(0).getFood_spend_recommanded() == 2) {
+                    if (isRegular)
+                        return score-1;
+                } else
+                    return score;
+
+            case "daily":
+                if (regularSpends[0].equals("daily") || regularSpends[1].equals("daily") || regularSpends[2].equals("daily"))
+                    isRegular = true;
+
+                if (result.get(0).getDaily_spend_recommanded() == 1) {
+                    if (isRegular)
+                        return score+1;
+                } else if (result.get(0).getDaily_spend_recommanded() == 2) {
+                    if (isRegular)
+                        return score-1;
+                } else
+                    return score;
+        }
+        System.out.println("Erreur lors de la comparaison des infos client avec l'offre en cours (mauvais nom de colonne");
         return score;
     }
 }

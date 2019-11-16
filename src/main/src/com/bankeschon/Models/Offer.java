@@ -158,7 +158,7 @@ public class Offer extends BaseModelORM {
         return this;
     }
 
-    public Object getTransport_spend_recommanded() {
+    public Integer getTransport_spend_recommanded() {
         return transport_spend_recommanded;
     }
 

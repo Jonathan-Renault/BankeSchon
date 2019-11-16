@@ -16,8 +16,8 @@ public class Prospect extends BaseModelORM {
     private Integer  professional_situation; // 0 = sans emploi, 1 = employé, 2 = cadre, 3 = fonctionnaire, 4 = indé
     private Integer  professional_contract_type; // 0 = interim, 1 = CDD, 2 = CDI
     private Integer  salary;
-    private String   spends; // 3 maximum, séparés par des |
-    private String   adapted_offers; // 3 maximum, séparés par des |
+    private String   spendings; // 3, séparés par des -
+    private String   adapted_offers; // 3 maximum, séparés par des -
     private String   created_at; // à convertir en timestamp
     private String   updated_at; // à convertir en timestamp
 
@@ -153,12 +153,12 @@ public class Prospect extends BaseModelORM {
         return this;
     }
 
-    public String getSpends() {
-        return spends;
+    public String getSpendings() {
+        return spendings;
     }
 
-    public Prospect setSpends(String spends) {
-        this.spends = spends;
+    public Prospect setSpendings(String spends) {
+        this.spendings = spends;
 
         return this;
     }
