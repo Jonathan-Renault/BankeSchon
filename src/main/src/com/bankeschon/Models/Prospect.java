@@ -14,14 +14,11 @@ public class Prospect extends BaseModelORM {
     private Boolean  can_be_contacted;
     private Integer  family_situation; // 0 = celibataire, 1 = marié/pacsé, 2 = divorcé/veuf
     private Integer  professional_situation; // 0 = sans emploi, 1 = employé, 2 = cadre, 3 = fonctionnaire, 4 = indé
-    private Integer  professional_contract_type; // 0 = interim, 1 = CDD, 2 = CDI
     private Integer  salary;
     private String   spendings; // 3, séparés par des -
     private String   adapted_offers; // 3 maximum, séparés par des -
     private String   created_at; // à convertir en timestamp
     private String   updated_at; // à convertir en timestamp
-
-    public Integer  age;
 
     public Integer getId() {
         return id;
@@ -133,16 +130,6 @@ public class Prospect extends BaseModelORM {
         return this;
     }
 
-    public Integer getProfessional_contract_type() {
-        return professional_contract_type;
-    }
-
-    public Prospect setProfessional_contract_type(Integer professional_contract_type) {
-        this.professional_contract_type = professional_contract_type;
-
-        return this;
-    }
-
     public Integer getSalary() {
         return salary;
     }
@@ -157,8 +144,8 @@ public class Prospect extends BaseModelORM {
         return spendings;
     }
 
-    public Prospect setSpendings(String spends) {
-        this.spendings = spends;
+    public Prospect setSpendings(String spendings) {
+        this.spendings = spendings;
 
         return this;
     }

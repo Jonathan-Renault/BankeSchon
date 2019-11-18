@@ -8,6 +8,7 @@ import sun.util.resources.LocaleData;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -37,7 +38,6 @@ public class Algorithm_utils {
         filters.add(filter.add("=", "1", "1"));
         offers = Database.select(_object, fields, filters);
         Offer offer = (Offer) offers.get(0);
-        System.out.println(offer.getCreated_at());
         return offers;
     }
 
@@ -77,7 +77,7 @@ public class Algorithm_utils {
         return (result.get(0).getMinimum_age() <= prospect_age) && (result.get(0).getMaximum_age() >= prospect_age);
     }
 
-    public Integer checkOfferInfoParameter (Prospect prospect,Integer score, String column, Integer id_offer) {
+    public Integer checkOfferInfoParameter (Prospect prospect, Integer age,Integer score, String column, Integer id_offer) {
         Offer _object = new Offer();
         List<Offer> result;
         ArrayList<String> fields = new ArrayList<String>();
@@ -91,7 +91,7 @@ public class Algorithm_utils {
             switch (column) {
                 case "age":
                     String[] recommandedAges = result.get(0).getRecommanded_age().split("-", 2);
-                    if (prospect.age <= Integer.parseInt(recommandedAges[0]) && prospect.age >= Integer.parseInt(recommandedAges[1]))
+                    if (age <= Integer.parseInt(recommandedAges[0]) && age >= Integer.parseInt(recommandedAges[1]))
                         return score+1;
                     else
                         return score;
@@ -117,11 +117,15 @@ public class Algorithm_utils {
                         return score;
             }
         } else
-            System.out.println("Erreur lors de la comparaison des infos client avec l'offre en cours (mauvais nom de colonne");
+            System.out.println("Erreur lors de la comparaison des infos client avec l'offre en cours (mauvais nom de colonne)");
         return score;
     }
 
     public Integer checkOfferSpendsParameter(Prospect prospect, Integer score, String column, Integer id_offer) {
+        if (prospect.getSpendings() == null) {
+            System.out.println("Erreur lors de la comparaison des infos client avec l'offre en cours (le client n'a pas de dépenses régulières renseignées)");
+            return score;
+        }
         String[] regularSpends = prospect.getSpendings().split("-", 3);
         Boolean isRegular = false;
         Offer _object = new Offer();
@@ -250,7 +254,15 @@ public class Algorithm_utils {
                 } else
                     return score;
         }
-        System.out.println("Erreur lors de la comparaison des infos client avec l'offre en cours (mauvais nom de colonne");
+        System.out.println("Erreur lors de la comparaison des infos client avec l'offre en cours (mauvais nom de colonne)");
         return score;
     }
+
+    /*public List<Offer> rankScores (List<Offer> scores) {
+        scores.sort(Collections.reverseOrder());                        // à modifier
+        for (Offer s: scores) {
+            System.out.println(s.score);
+        }
+        return scores;
+    }*/
 }

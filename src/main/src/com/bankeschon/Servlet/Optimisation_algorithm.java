@@ -26,12 +26,13 @@ public class Optimisation_algorithm extends HttpServlet {
 
         // définition des variables nécessaires au déroulé de l'algorithme
         Integer id_prospect = 3;        //test, à modifier pour récupérer le vrai id
-        Integer score = 0;
         Prospect prospect;
+        Integer score = 0;
+        List<Offer> scores = null;
 
         // récupere le prospect qui vient d'être modifié
         prospect = algo.lastProspectModified(id_prospect);
-        prospect.age = algo.findAge(prospect.getBirthday());
+        Integer prospectAge = algo.findAge(prospect.getBirthday());
 
         //récupère toutes les offres existantes, pour commencer la comparaison
         List offers = algo.getAllOffers();
@@ -46,25 +47,30 @@ public class Optimisation_algorithm extends HttpServlet {
             }
 
             // vérifie si l'age du prospect est bien compris entre l'age maximum et minimum
-            if (!algo.checkCorrectAge(prospect.age, offer.getId())) {
+            if (!algo.checkCorrectAge(prospectAge, offer.getId())) {
                 // si oui, passage à l'offre suivant
                 continue;
             }
 
             // vérifie les paramètres recommandés, pour incrémenter, décrementer ou laisser tel quel score
             String[] spendsRecommanded = {"rent", "insurance", "health", "car", "transport", "communication", "hobby", "food", "daily"};
-            String[] informationsRecommanded = {"age", "salary", "familial_situation", "pro_situation"};
+            String[] informationsRecommanded = {"age", "salary", "family_situation", "pro_situation"};
 
             for (String s : informationsRecommanded) {
-                score = algo.checkOfferInfoParameter(prospect, score, s, offer.getId());
+                score = algo.checkOfferInfoParameter(prospect, prospectAge, score, s, offer.getId());
             }
 
-            for (String s: spendsRecommanded) {
-                score = algo.checkOfferSpendsParameter(prospect, score, s, offer.getId());
+            if (prospect.getSpendings() != null) {
+                for (String s : spendsRecommanded) {
+                    score = algo.checkOfferSpendsParameter(prospect, score, s, offer.getId());
+                }
             }
             // vérifie que le score de l'offre soit supérieur à 5
-
+            if (score > 5) {
                 // si oui, le score est ajouté au tableau scores, avec comme index le nom de l'offre
+                scores.add(offer);
+            }
+
         }
 
         // classe le tableau scores du plus haut entier au plus bas
