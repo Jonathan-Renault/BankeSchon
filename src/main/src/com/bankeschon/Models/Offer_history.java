@@ -3,11 +3,22 @@ package com.bankeschon.Models;
 public class Offer_history extends BaseModelORM {
     private String tableName = "history";
 
+    private Integer id;
     private Integer id_offer;
     private Integer id_prospect;
     private Boolean accepted;
     private String created_at;
     private String updated_at;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Offer_history setId(Integer id) {
+        this.id = id;
+
+        return this;
+    }
 
     public Integer getId_offer() {
         return id_offer;

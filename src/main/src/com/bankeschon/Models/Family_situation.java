@@ -3,8 +3,19 @@ package com.bankeschon.Models;
 public class Family_situation extends BaseModelORM {
     private String tableName = "family_situations";
 
+    private Integer id;
     private String label;
     private Integer number;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Family_situation setId(Integer id) {
+        this.id = id;
+
+        return this;
+    }
 
     public String getLabel() {
         return label;

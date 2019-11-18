@@ -3,6 +3,7 @@ package com.bankeschon.Models;
 public class Offer extends BaseModelORM {
     private String tableName = "offers";
 
+    private Integer id;
     private String offer_name;
     private Integer priority; // de 0 à 3
     private Integer minimum_age;
@@ -27,6 +28,15 @@ public class Offer extends BaseModelORM {
     private String   created_at; // à convertir en timestamp
     private String   updated_at; // à convertir en timestamp
 
+    public Integer getId() {
+        return id;
+    }
+
+    public Offer setId(Integer id) {
+        this.id = id;
+
+        return this;
+    }
 
     public String getOffer_name() {
         return offer_name;
@@ -78,11 +88,11 @@ public class Offer extends BaseModelORM {
         return this;
     }
 
-    public String getSalary() {
+    public String getRecommanded_salary() {
         return recommanded_salary;
     }
 
-    public Offer setSalary(String recommanded_salary) {
+    public Offer setRecommanded_salary(String recommanded_salary) {
         this.recommanded_salary = recommanded_salary;
 
         return this;
@@ -148,7 +158,7 @@ public class Offer extends BaseModelORM {
         return this;
     }
 
-    public Object getTransport_spend_recommanded() {
+    public Integer getTransport_spend_recommanded() {
         return transport_spend_recommanded;
     }
 

@@ -5,11 +5,22 @@ import java.sql.Timestamp;
 public class User extends BaseModelORM {
     private String tableName = "users";
 
+    private Integer id;
     private String login;
     private String password;
     private Integer role;
     private Timestamp created_at;
     private Timestamp updated_at;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public User setId(Integer id) {
+        this.id = id;
+
+        return this;
+    }
 
     public String getLogin() {
         return login;

@@ -11,8 +11,6 @@ import java.util.List;
 public class BaseModelORM {
 
     //Nous définissons les variables qui seront utilisées
-    private Integer id;
-
     private String tableName = "";
     private String insertQueryString = "INSERT INTO ";
     private String updateQueryString = "UPDATE ";
@@ -24,20 +22,6 @@ public class BaseModelORM {
     private String ucFirst(String string)
     {
         return Character.toUpperCase(string.charAt(0)) + string.substring(1);
-    }
-
-    //Voici la fonction qui va nous permettre de fabriquer l'id en bdd
-    public BaseModelORM setId(Integer id)
-    {
-        this.id = id;
-
-        return this;
-    }
-
-    //Celle qui nous récupère id
-    public Integer getId()
-    {
-        return this.id;
     }
 
     //Fonction qui récup le nom de la table
@@ -484,6 +468,12 @@ public class BaseModelORM {
                 {
                     statement.setString (i,  (String) classMethod.invoke(this) );
                 }
+
+                if( field.getType() == Boolean.class )
+                {
+                    statement.setBoolean (i,  (Boolean) classMethod.invoke(this) );
+                }
+
 
                 if( field.getType() == Timestamp.class )
                 {
