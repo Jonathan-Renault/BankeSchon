@@ -1,29 +1,57 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-
-  <servlet>
-    <servlet-name>Test_BDD</servlet-name>
-    <servlet-class>com.bankeschon.Servlet.Test_bdd</servlet-class>
-  </servlet>
 
   <servlet>
     <servlet-name>Optimisation_algorithm</servlet-name>
     <servlet-class>com.bankeschon.Servlet.Optimisation_algorithm</servlet-class>
   </servlet>
 
-
-  <servlet-mapping>
-    <servlet-name>Test_BDD</servlet-name>
-    <url-pattern>/toto</url-pattern>
-  </servlet-mapping>
-
   <servlet-mapping>
     <servlet-name>Optimisation_algorithm</servlet-name>
     <url-pattern>/optimisation</url-pattern>
   </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Inscription</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Inscription</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Inscription</servlet-name>
+        <url-pattern>/inscription</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Connexion</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Connexion</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Connexion</servlet-name>
+        <url-pattern>/connexion</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Deconnexion</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Deconnexion</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Deconnexion</servlet-name>
+        <url-pattern>/deconnexion</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Admin</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
 
 </web-app>

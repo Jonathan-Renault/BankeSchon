@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@include file="partials/header.jsp" %>
-
 <!--------------------------------------------------- Modal contact --------------------------------------------------->
 <%@include file="partials/modal_contact.jsp" %>
+<!--------------------------------------------------- Restriction ----------------------------------------------------->
+<%@include file="partials/restriction_employe.jsp" %>
 
 <!------------------------------------------------- Page de recherche ------------------------------------------------->
 <h1 class="h1-prospect">

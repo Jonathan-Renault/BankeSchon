@@ -1,14 +1,15 @@
 @import "reset.css";
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
-
-
 html,
 body {
     background-color: var(--bg-color);
     color: var(--font-color);
 }
 
+form .erreur {
+    color: #900;
+}
 
 .card {
     max-width: 540px;
@@ -361,21 +362,26 @@ input:checked + .slider:before {
     .form-navbar-search {
         width: 100%;
     }
+
     .float {
         width: 90%;
         float: none;
         padding: 10px;
         margin: 0 auto;
     }
+
     .input-search {
         width: 63%;
     }
+
     .table-part1 {
         width: 100%;
     }
+
     .table-part2 {
         width: 100%;
     }
+
     .btn {
         padding: 0;
     }

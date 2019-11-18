@@ -474,6 +474,7 @@ public class BaseModelORM {
                     statement.setBoolean (i,  (Boolean) classMethod.invoke(this) );
                 }
 
+
                 if( field.getType() == Timestamp.class )
                 {
                     statement.setTimestamp (i,  (Timestamp) classMethod.invoke(this) );

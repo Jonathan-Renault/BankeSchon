@@ -21,12 +21,11 @@
     <link rel="stylesheet" type="text/css" href="partials/style.css"/>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <link rel="icon" href="img/bankeschon_logo.svg" />
+    <link rel="icon" href="img/bankeschon_logo.svg"/>
     <title>BankeSchön</title>
 </head>
 
 <body>
-
 <header>
     <!---------------------------------------------------- Navbar ----------------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,7 +45,7 @@
                 </li>
                 <!----------------------------------------- Deconnexion ----------------------------------------------->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Déconnexion</a>
+                    <a class="nav-link" href="deconnexion">Déconnexion</a>
                 </li>
             </ul>
 

@@ -2,9 +2,10 @@
 <%@include file="partials/header.jsp" %>
 <!--------------------------------------------------- Modal contact --------------------------------------------------->
 <%@include file="partials/modal_contact.jsp" %>
+<!--------------------------------------------------- Restriction ----------------------------------------------------->
+<%@include file="partials/restriction_admin.jsp" %>
 
 <!---------------------------------------------- Page historique des appels ------------------------------------------->
-
 <a href="admin.jsp">
     <button type="button" class="btn btn-link"><span class="retour">Retour</span></button>
 </a>
