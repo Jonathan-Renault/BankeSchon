@@ -44,6 +44,20 @@
     <artifactId>postgresql</artifactId>
     <version>42.2.8</version>
   </dependency>
+    <!-- https://mvnrepository.com/artifact/org.mindrot.bcrypt/bcrypt -->
+    <dependency>
+      <groupId>org.mindrot</groupId>
+      <artifactId>jbcrypt</artifactId>
+      <version>0.4</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+
   </dependencies>
 
   <build>

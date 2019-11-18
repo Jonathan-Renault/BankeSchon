@@ -2,6 +2,8 @@
 <%@include file="partials/header.jsp" %>
 <!--------------------------------------------------- Modal contact --------------------------------------------------->
 <%@include file="partials/modal_contact.jsp" %>
+<!--------------------------------------------------- Restriction ----------------------------------------------------->
+<%@include file="partials/restriction_employe.jsp" %>
 
 <!------------------------------------------------- interface ------------------------------------------------->
 <div class="container interface">

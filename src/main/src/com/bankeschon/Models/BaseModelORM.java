@@ -485,6 +485,11 @@ public class BaseModelORM {
                     statement.setString (i,  (String) classMethod.invoke(this) );
                 }
 
+                if( field.getType() == Timestamp.class )
+                {
+                    statement.setTimestamp (i,  (Timestamp) classMethod.invoke(this) );
+                }
+
                 i = i + 1;
             }
         }

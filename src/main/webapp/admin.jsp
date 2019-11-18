@@ -1,13 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <%@include file="partials/header.jsp" %>
 <!--------------------------------------------------- Modal contact --------------------------------------------------->
 <%@include file="partials/modal_contact.jsp" %>
+<!--------------------------------------------------- Restriction ----------------------------------------------------->
+<%@include file="partials/restriction_admin.jsp" %>
 
 <!--------------------------------------------------- Page admin ------------------------------------------------------>
 <div class="card-position">
     <!---------------------------------------------- Card add user ---------------------------------------------------->
     <div class="float">
-        <a href="add.jsp">
+        <a href="inscription.jsp">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -25,7 +28,7 @@
         </a>
     </div>
     <!---------------------------------------------- Card delete user ------------------------------------------------------->
-    <div class="float">
+        <div class="float">
         <a href="delete.jsp">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
@@ -45,7 +48,7 @@
     </div>
     <!---------------------------------------------- Card create ------------------------------------------------------->
     <div class="float">
-        <a href="new.jsp">
+        <a href="new_product.jsp">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -103,6 +106,7 @@
 <div class="clear"></div>
 <!-------------------------------------------------- Dark mode -------------------------------------------------------->
 <%@include file="partials/dark_mode.jsp" %>
+
 
 </body>
 
