@@ -1,19 +1,11 @@
-<%@ page import="java.util.Objects" %>
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <%@include file="partials/header.jsp" %>
 <!--------------------------------------------------- Modal contact --------------------------------------------------->
 <%@include file="partials/modal_contact.jsp" %>
-<% HttpSession checkSession = request.getSession(false);
-    System.out.println(checkSession);
-    if (checkSession.getAttribute("role") == null) {
-        response.sendRedirect(request.getContextPath() + "/403.jsp");
-    } else {
-        if (Objects.equals(checkSession.getAttribute("role"), 1)) {
-            response.sendRedirect(request.getContextPath() + "/403.jsp");
-        }
-    }
-%>
+<!--------------------------------------------------- Restriction ----------------------------------------------------->
+<%@include file="partials/restriction_admin.jsp" %>
+
 <!--------------------------------------------------- Page admin ------------------------------------------------------>
 <div class="card-position">
     <!---------------------------------------------- Card add user ---------------------------------------------------->
@@ -36,7 +28,7 @@
         </a>
     </div>
     <!---------------------------------------------- Card delete user ------------------------------------------------------->
-    <div class="float">
+        <div class="float">
         <a href="delete.jsp">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
@@ -56,7 +48,7 @@
     </div>
     <!---------------------------------------------- Card create ------------------------------------------------------->
     <div class="float">
-        <a href="new.jsp">
+        <a href="new_product.jsp">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
                     <div class="col-md-4">

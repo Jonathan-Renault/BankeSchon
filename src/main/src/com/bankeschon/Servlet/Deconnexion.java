@@ -15,6 +15,7 @@ public class Deconnexion extends HttpServlet {
         /* Récupération et destruction de la session en cours */
         HttpSession session = request.getSession();
         session.invalidate();
+
         System.out.println("Deconnexion réussi");
         /* Affichage de la page de connexion */
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
