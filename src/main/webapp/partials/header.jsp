@@ -46,7 +46,7 @@
                 </li>
                 <!----------------------------------------- Deconnexion ----------------------------------------------->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Déconnexion</a>
+                    <a class="nav-link" href="deconnexion">Déconnexion</a>
                 </li>
             </ul>
 

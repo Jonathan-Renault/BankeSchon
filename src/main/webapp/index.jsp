@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -26,14 +28,20 @@
         <h2 class="text-center">Connexion</h2>
         <div class="form-group">
             <label for="exampleInputEmail1">Adresse Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
                    placeholder="Entrer une adresse Email">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Mot de passe</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
+            <input type="password" class="form-control" name="motdepasse" id="exampleInputPassword1"
+                   placeholder="Mot de passe">
         </div>
-        <button type="submit" class="btn btn-primary">Se connecter</button>
+        <input type="submit" value="Se connecter" class="btn btn-primary"/>
+        <%-- Vérification de la présence d'un objet utilisateur en session --%>
+        <c:if test="${!empty sessionScope.sessionUtilisateur}">
+            <%-- Si l'utilisateur existe en session, alors on affiche son adresse email. --%>
+            <p class="succes">Vous êtes connecté(e) avec l'adresse : ${sessionScope.sessionUtilisateur.email}</p>
+        </c:if>
     </form>
 </div>
 <!-------------------------------------------------- Dark mode -------------------------------------------------------->

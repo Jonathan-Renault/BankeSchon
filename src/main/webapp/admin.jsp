@@ -1,8 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.Objects" %>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <%@include file="partials/header.jsp" %>
 <!--------------------------------------------------- Modal contact --------------------------------------------------->
 <%@include file="partials/modal_contact.jsp" %>
-
+<% HttpSession checkSession = request.getSession(false);
+    System.out.println(checkSession);
+    if (checkSession.getAttribute("role") == null) {
+        response.sendRedirect(request.getContextPath() + "/403.jsp");
+    } else {
+        if (Objects.equals(checkSession.getAttribute("role"), 1)) {
+            response.sendRedirect(request.getContextPath() + "/403.jsp");
+        }
+    }
+%>
 <!--------------------------------------------------- Page admin ------------------------------------------------------>
 <div class="card-position">
     <!---------------------------------------------- Card add user ---------------------------------------------------->
@@ -103,6 +114,7 @@
 <div class="clear"></div>
 <!-------------------------------------------------- Dark mode -------------------------------------------------------->
 <%@include file="partials/dark_mode.jsp" %>
+
 
 </body>
 

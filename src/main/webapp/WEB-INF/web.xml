@@ -13,7 +13,6 @@
         <url-pattern>/toto</url-pattern>
     </servlet-mapping>
 
-
     <servlet>
         <servlet-name>Inscription</servlet-name>
         <servlet-class>com.bankeschon.Servlet.Inscription</servlet-class>
@@ -22,5 +21,36 @@
     <servlet-mapping>
         <servlet-name>Inscription</servlet-name>
         <url-pattern>/inscription</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Connexion</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Connexion</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Connexion</servlet-name>
+        <url-pattern>/connexion</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Deconnexion</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Deconnexion</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Deconnexion</servlet-name>
+        <url-pattern>/deconnexion</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Admin</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin</url-pattern>
     </servlet-mapping>
 </web-app>
