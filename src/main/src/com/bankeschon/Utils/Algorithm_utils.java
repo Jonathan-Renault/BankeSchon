@@ -1,6 +1,7 @@
 package com.bankeschon.Utils;
 
 import com.bankeschon.Models.Offer;
+import com.bankeschon.Models.Offer_score;
 import com.bankeschon.Models.Prospect;
 import com.bankeschon.Models.Offer_history;
 
@@ -36,7 +37,6 @@ public class Algorithm_utils {
         fields.add("*");
         filters.add(filter.add("=", "1", "1"));
         offers = Database.select(_object, fields, filters);
-        Offer offer = (Offer) offers.get(0);
         return offers;
     }
 
@@ -105,11 +105,15 @@ public class Algorithm_utils {
         } else if (column.equals("familial_situation") || column.equals("pro_situation")) {
             switch (column) {
                 case "familial_situation":
+                    if (result.get(0).getRecommanded_familial_situation() == 4)
+                        return score+1;
                     if (prospect.getFamily_situation().equals(result.get(0).getRecommanded_familial_situation()))
                         return score+1;
                     else
                         return score;
                 case "pro_situation":
+                    if (result.get(0).getRecommanded_pro_situation() == 6)
+                        return score+1;
                     if (prospect.getProfessional_situation().equals(result.get(0).getRecommanded_pro_situation()))
                         return score+1;
                     else
@@ -257,11 +261,10 @@ public class Algorithm_utils {
         return score;
     }
 
-    /*public List<Offer> rankScores (List<Offer> scores) {
-        scores.sort(Collections.reverseOrder());                        // à modifier
-        for (Offer s: scores) {
-            System.out.println(s.score);
-        }
+    public ArrayList<Offer_score> rankScores (ArrayList<Offer_score> scores) {
+
+        //
+
         return scores;
-    }*/
+    }
 }

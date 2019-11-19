@@ -7,8 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
+import com.bankeschon.Models.Offer_score;
 import com.bankeschon.Models.Prospect;
 import com.bankeschon.Models.Offer;
 import com.bankeschon.Models.Offer_history;
@@ -28,7 +30,7 @@ public class Optimisation_algorithm extends HttpServlet {
         Integer id_prospect = 3;        //test, à modifier pour récupérer le vrai id
         Prospect prospect;
         Integer score = 0;
-        List<Offer> scores = null;
+        ArrayList<Offer_score> scores = new ArrayList<Offer_score>();
 
         // récupere le prospect qui vient d'être modifié
         prospect = algo.lastProspectModified(id_prospect);
@@ -58,19 +60,24 @@ public class Optimisation_algorithm extends HttpServlet {
 
             for (String s : informationsRecommanded) {
                 score = algo.checkOfferInfoParameter(prospect, prospectAge, score, s, offer.getId());
+                System.out.println("LE SCORE EST DE" + score);
             }
 
             if (prospect.getSpendings() != null) {
                 for (String s : spendsRecommanded) {
                     score = algo.checkOfferSpendsParameter(prospect, score, s, offer.getId());
+                    System.out.println("LE SCORE EST DE" + score);
                 }
             }
             // vérifie que le score de l'offre soit supérieur à 5
-            if (score > 5) {
+            if (score > 1) {
                 // si oui, le score est ajouté au tableau scores, avec comme index le nom de l'offre
-                scores.add(offer);
+                Offer_score offer_score = new Offer_score();
+                offer_score.setId_offer(offer.getId());
+                offer_score.setScore(score);
+                scores.add(offer_score);
             }
-
+            scores = algo.rankScores(scores);
         }
 
         // classe le tableau scores du plus haut entier au plus bas

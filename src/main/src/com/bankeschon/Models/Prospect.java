@@ -7,7 +7,7 @@ public class Prospect extends BaseModelORM {
     private Integer  is_customer;
     private String   name;
     private String   surname;
-    private String   birthday; // à convertir en datetime
+    private String   birthday; // à convertir en date
     private String   tel;
     private String   mail;
     private String   last_contact; // à convertir en timestamp
