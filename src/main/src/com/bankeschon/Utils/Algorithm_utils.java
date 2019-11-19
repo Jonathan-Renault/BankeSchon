@@ -3,7 +3,6 @@ package com.bankeschon.Utils;
 import com.bankeschon.Models.Offer;
 import com.bankeschon.Models.Prospect;
 import com.bankeschon.Models.Offer_history;
-import sun.util.resources.LocaleData;
 
 import java.time.LocalDate;
 import java.time.Period;
