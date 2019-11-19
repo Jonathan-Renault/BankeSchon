@@ -8,6 +8,7 @@ public class User extends BaseModelORM {
     private Integer id;
     private String login;
     private String password;
+    private String token;
     private Integer role;
     private Timestamp created_at;
     private Timestamp updated_at;
@@ -76,5 +77,13 @@ public class User extends BaseModelORM {
     public String getTableName()
     {
         return this.tableName;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

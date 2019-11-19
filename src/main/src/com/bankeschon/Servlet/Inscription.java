@@ -51,6 +51,7 @@ public class Inscription extends HttpServlet {
             User user = new User();
 
             String password = call.generateRandomString();
+            String token = call.generateRandomString();
             String pwd_test = "admin";
             String pw_hash = BCrypt.hashpw(pwd_test, BCrypt.gensalt());
             Timestamp date = new Timestamp(System.currentTimeMillis());
@@ -60,7 +61,8 @@ public class Inscription extends HttpServlet {
                     .setRole(role)
                     .setPassword(pw_hash)
                     .setCreated_at(date)
-                    .setUpdated_at(null);
+                    .setUpdated_at(null)
+                    .setToken(token);
 
             Database.insert(user);
             System.out.println(pw_hash);
@@ -79,5 +81,6 @@ public class Inscription extends HttpServlet {
         /* Transmission de la paire d'objets request/response à notre JSP */
         this.getServletContext().getRequestDispatcher(VUE).forward(request, response);
     }
+
 }
 
