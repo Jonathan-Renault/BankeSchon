@@ -99,6 +99,24 @@
             </div>
         </a>
     </div>
+    <!---------------------------------------------- Card Edit ------------------------------------------------------->
+    <div class="float">
+        <a href="stat.jsp">
+            <div class="card mb-3 card-margin">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="img/17685541551558096336.svg" class="card-img" alt="img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Statistiques</h5>
+                            <p class="card-text">Voir les statistiques des employés de banque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
 <div class="clear"></div>
 <!-------------------------------------------------- Dark mode -------------------------------------------------------->
