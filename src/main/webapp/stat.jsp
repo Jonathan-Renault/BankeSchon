@@ -1,16 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@include file="partials/header.jsp" %>
+<%@include file="partials/restriction_admin.jsp" %>
 <!--------------------------------------------------- Modal contact --------------------------------------------------->
 <%@include file="partials/modal_contact.jsp" %>
 
-
+<a href="admin.jsp">
+    <button type="button" class="btn btn-link"><span class="retour">Retour</span></button>
+</a>
 <!--------------------------------------------------- Page stat ------------------------------------------------------>
 <div class="card-position">
     <h1 class="h1-prospect">Statistiques</h1>
 
     <!---------------------------------------------- Card Edit ------------------------------------------------------->
     <div class="float">
-        <a href="stat.jsp">
+        <a href="">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -35,7 +38,7 @@
 
     <!---------------------------------------------- Card Edit ------------------------------------------------------->
     <div class="float">
-        <a href="stat.jsp">
+        <a href="">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -76,7 +79,7 @@
 
     <!---------------------------------------------- Card Edit ------------------------------------------------------->
     <div class="float">
-        <a href="stat.jsp">
+        <a href="">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -117,7 +120,7 @@
 
     <!---------------------------------------------- Card Edit ------------------------------------------------------->
     <div class="float">
-        <a href="stat.jsp">
+        <a href="">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -125,8 +128,20 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Nombre de vente hier</h5>
-                            <p class="card-text">4242</p>
+                            <h5 class="card-title">Nombre de vente </h5>
+                            <p class="card-text">
+                                Hier :
+                                <%
+                                    String sellsuccess_1 = (String) request.getAttribute("sellsuccess_1");
+                                    out.println( sellsuccess_1 );
+                                %>
+                                <br>
+                                Sous 30 jours :
+                                <%
+                                    String sellsuccess_30 = (String) request.getAttribute("sellsuccess_30");
+                                    out.println( sellsuccess_30 );
+                                %>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -136,7 +151,7 @@
 
     <!---------------------------------------------- Card Edit ------------------------------------------------------->
     <div class="float">
-        <a href="stat.jsp">
+        <a href="">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -145,7 +160,13 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">Taux de conversion</h5>
-                            <p class="card-text">42%</p>
+                            <p class="card-text">
+                                <%
+                                    Float conversion_rate = (Float) request.getAttribute("conversion_rate");
+                                    out.println( conversion_rate );
+                                %>
+                                %
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -155,7 +176,7 @@
 
     <!---------------------------------------------- Card Edit ------------------------------------------------------->
     <div class="float">
-        <a href="stat.jsp">
+        <a href="">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
                     <div class="col-md-4">
@@ -165,7 +186,21 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">Ratio de souscription</h5>
-                            <p class="card-text">42%</p>
+                            <p class="card-text">
+                                Hier :
+                                <%
+                                    Float suscription_rate_1 = (Float) request.getAttribute("suscription_rate_1");
+                                    out.println( suscription_rate_1 );
+                                %>
+                                %
+                                <br>
+                                Sous 30 jours :
+                                <%
+                                    Float suscription_rate_30 = (Float) request.getAttribute("suscription_rate_30");
+                                    out.println( suscription_rate_30 );
+                                %>
+                                %
+                            </p>
                         </div>
                     </div>
                 </div>

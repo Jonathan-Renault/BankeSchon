@@ -79,7 +79,63 @@ public class Query extends HttpServlet {
         String user_mostsell_30s        = q.getstat(user_mostsell_30, "offer_name");
         request.setAttribute( "user_mostsell_30", user_mostsell_30s );
 
-        System.out.println(user_mostsell_1s);
+
+        //sellsuccess_1
+        String sellsuccess_1               = "SELECT * FROM sellsuccess_1";
+        String sellsuccess_1s                = q.getstat(sellsuccess_1, "count");
+
+        request.setAttribute( "sellsuccess_1", sellsuccess_1s );
+
+
+        //sellsuccess_30
+        String sellsuccess_30               = "SELECT * FROM sellsuccess_30";
+        String sellsuccess_30s                = q.getstat(sellsuccess_30, "count");
+
+        request.setAttribute( "sellsuccess_30", sellsuccess_30s );
+
+
+        //howmanycall_1
+        String howmanycall_1               = "SELECT * FROM howmanycall_1";
+        String howmanycall_1s                = q.getstat(howmanycall_1, "count");
+
+
+        //howmanycall_30
+        String howmanycall_30               = "SELECT * FROM howmanycall_30";
+        String howmanycall_30s                = q.getstat(howmanycall_30, "count");
+
+
+        //howmanyprospect_iscustomer
+        String howmanyprospect_iscustomer               = "SELECT * FROM howmanyprospect_iscustomer";
+        String howmanyprospect_iscustomers                = q.getstat(howmanyprospect_iscustomer, "count");
+
+
+        // suscription_rate_1
+        Integer howmanycall_1_int = Integer.parseInt(howmanycall_1s);
+        Integer sellsuccess_1_int = Integer.parseInt(sellsuccess_1s);
+
+        Float suscription_rate_1 = (Float.valueOf(howmanycall_1_int / sellsuccess_1_int)) * 100;
+        request.setAttribute( "suscription_rate_1", suscription_rate_1 );
+
+
+        // suscription_rate_30
+        Integer howmanycall_30_int = Integer.parseInt(howmanycall_30s);
+        Integer sellsuccess_30_int = Integer.parseInt(sellsuccess_30s);
+
+        Float suscription_rate_30 = (Float.valueOf(howmanycall_30_int / sellsuccess_30_int)) * 100;
+        request.setAttribute( "suscription_rate_30", suscription_rate_30 );
+
+        // conversion_rate
+        Integer h_int = Integer.parseInt(h);
+        Integer howmanyprospect_iscustomer_int = Integer.parseInt(howmanyprospect_iscustomers);
+
+        Float conversion_rate = ((float)howmanyprospect_iscustomer_int / h_int) * 100f;
+        request.setAttribute( "conversion_rate", conversion_rate );
+
+        System.out.println(howmanyprospect_iscustomer_int);
+        System.out.println("/");
+        System.out.println(h_int);
+        System.out.println("=");
+        System.out.println(conversion_rate);
 
         this.getServletContext().getRequestDispatcher( "/stat.jsp" ).forward( request, response );
 
