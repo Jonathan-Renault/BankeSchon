@@ -5,6 +5,8 @@ import com.bankeschon.Models.Offer_score;
 import com.bankeschon.Models.Prospect;
 import com.bankeschon.Models.Offer_history;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
@@ -259,5 +261,27 @@ public class Algorithm_utils {
         }
         System.out.println("Erreur lors de la comparaison des infos client avec l'offre en cours (mauvais nom de colonne)");
         return score;
+    }
+
+    public void updateOffersRecommanded (String firstOffer, String secondOffer, String thirdOffer, Prospect prospect) {
+        String offersRecommanded = (firstOffer + "-" +secondOffer + "-" + thirdOffer);
+        Timestamp time = new Timestamp(System.currentTimeMillis());
+        prospect.setId(prospect.getId())
+                .setIs_customer(prospect.getIs_customer())
+                .setName(prospect.getName())
+                .setSurname(prospect.getSurname())
+                .setBirthday(prospect.getBirthday())
+                .setTel(prospect.getTel())
+                .setMail(prospect.getMail())
+                .setLast_contact(prospect.getLast_contact())
+                .setCan_be_contacted(prospect.getCan_be_contacted())
+                .setFamily_situation(prospect.getFamily_situation())
+                .setProfessional_situation(prospect.getProfessional_situation())
+                .setSalary(prospect.getSalary())
+                .setSpendings(prospect.getSpendings())
+                .setAdapted_offers(offersRecommanded)
+                .setCreated_at(prospect.getCreated_at())
+                .setUpdated_at(time);
+        Database.updateId(prospect, prospect.getId());
     }
 }

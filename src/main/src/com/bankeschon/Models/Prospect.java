@@ -1,5 +1,7 @@
 package com.bankeschon.Models;
 
+import java.sql.Timestamp;
+
 public class Prospect extends BaseModelORM {
     private String tableName = "prospects";
 
@@ -10,15 +12,15 @@ public class Prospect extends BaseModelORM {
     private String   birthday; // à convertir en date
     private String   tel;
     private String   mail;
-    private String   last_contact; // à convertir en timestamp
+    private Timestamp   last_contact; // à convertir en timestamp
     private Boolean  can_be_contacted;
     private Integer  family_situation; // 0 = celibataire, 1 = marié/pacsé, 2 = divorcé/veuf
     private Integer  professional_situation; // 0 = sans emploi, 1 = employé, 2 = cadre, 3 = fonctionnaire, 4 = indé
     private Integer  salary;
     private String   spendings; // 3, séparés par des -
     private String   adapted_offers; // 3 maximum, séparés par des -
-    private String   created_at; // à convertir en timestamp
-    private String   updated_at; // à convertir en timestamp
+    private Timestamp   created_at; // à convertir en timestamp
+    private Timestamp updated_at; // à convertir en timestamp
 
     public Integer getId() {
         return id;
@@ -90,11 +92,11 @@ public class Prospect extends BaseModelORM {
         return this;
     }
 
-    public String getLast_contact() {
+    public Timestamp getLast_contact() {
         return last_contact;
     }
 
-    public Prospect setLast_contact(String last_contact) {
+    public Prospect setLast_contact(Timestamp last_contact) {
         this.last_contact = last_contact;
 
         return this;
@@ -160,21 +162,21 @@ public class Prospect extends BaseModelORM {
         return this;
     }
 
-    public String getCreated_at() {
+    public Timestamp getCreated_at() {
         return created_at;
     }
 
-    public Prospect setCreated_at(String created_at) {
+    public Prospect setCreated_at(Timestamp created_at) {
         this.created_at = created_at;
 
         return this;
     }
 
-    public String getUpdated_at() {
+    public Timestamp getUpdated_at() {
         return updated_at;
     }
 
-    public Prospect setUpdated_at(String updated_at) {
+    public Prospect setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
 
         return this;

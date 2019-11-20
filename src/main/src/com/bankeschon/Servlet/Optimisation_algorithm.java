@@ -28,7 +28,7 @@ public class Optimisation_algorithm extends HttpServlet {
         Algorithm_utils algo = new Algorithm_utils();
 
         // définition des variables nécessaires au déroulé de l'algorithme
-        Integer id_prospect = 3;        //test, à modifier pour récupérer le vrai id
+        Integer id_prospect = 7;        //test, à modifier pour récupérer le vrai id
         Prospect prospect;
         Integer score = 0;
         ArrayList<Offer_score> scores = new ArrayList<Offer_score>();
@@ -61,13 +61,11 @@ public class Optimisation_algorithm extends HttpServlet {
 
             for (String s : informationsRecommanded) {
                 score = algo.checkOfferInfoParameter(prospect, prospectAge, score, s, offer.getId());
-                System.out.println("LE SCORE EST DE" + score);
             }
 
             if (prospect.getSpendings() != null) {
                 for (String s : spendsRecommanded) {
                     score = algo.checkOfferSpendsParameter(prospect, score, s, offer.getId());
-                    System.out.println("LE SCORE EST DE" + score);
                 }
             }
             // vérifie que le score de l'offre soit supérieur à 5
@@ -83,11 +81,9 @@ public class Optimisation_algorithm extends HttpServlet {
         }
         // classe le tableau scores du plus haut entier au plus bas
         Collections.sort(scores, Collections.reverseOrder());
-        for (Offer_score s: scores) {
-            System.out.println("NOM de l'offre: " + s.getName_offer() + " Score de l'offre: " + s.getScore());
-        }
         String firstOffer = scores.get(0).getName_offer();
         String secondOffer = scores.get(1).getName_offer();
         String thirdOffer = scores.get(2).getName_offer();
+        algo.updateOffersRecommanded (firstOffer, secondOffer, thirdOffer, prospect);
     }
 }
