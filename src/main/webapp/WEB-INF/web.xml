@@ -53,4 +53,14 @@
         <servlet-name>Stat</servlet-name>
         <url-pattern>/stati</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Query</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Query</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Query</servlet-name>
+        <url-pattern>/query</url-pattern>
+    </servlet-mapping>
 </web-app>
