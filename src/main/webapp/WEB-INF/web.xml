@@ -23,17 +23,22 @@
         <servlet-name>Deconnexion</servlet-name>
         <servlet-class>com.bankeschon.Servlet.Deconnexion</servlet-class>
     </servlet>
+  
+      <servlet>
+        <servlet-name>Produit</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Produit</servlet-class>
+    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>Deconnexion</servlet-name>
-        <url-pattern>/deconnexion</url-pattern>
-    </servlet-mapping>
-
+    <servlet>
+        <servlet-name>Query</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Query</servlet-class>
+    </servlet>
+  
     <servlet-mapping>
         <servlet-name>Optimisation_algorithm</servlet-name>
         <url-pattern>/optimisation</url-pattern>
     </servlet-mapping>
-
+  
     <servlet-mapping>
         <servlet-name>Inscription</servlet-name>
         <url-pattern>/inscription</url-pattern>
@@ -42,5 +47,20 @@
     <servlet-mapping>
         <servlet-name>Connexion</servlet-name>
         <url-pattern>/connexion</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Deconnexion</servlet-name>
+        <url-pattern>/deconnexion</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Produit</servlet-name>
+        <url-pattern>/produit</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Query</servlet-name>
+        <url-pattern>/query</url-pattern>
     </servlet-mapping>
 </web-app>

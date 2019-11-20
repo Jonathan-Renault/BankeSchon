@@ -16,7 +16,8 @@
         <h2 class="text-center">Créer un nouvel utilisateur</h2>
         <div class="form-group">
             <label for="exampleInputEmail1">Adresse Email</label>
-            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+            <input type="email" class="form-control" value="${param.email}" name="email" id="exampleInputEmail1"
+                   aria-describedby="emailHelp"
                    placeholder="Entrer Email">
         </div>
         <div class="form-group">

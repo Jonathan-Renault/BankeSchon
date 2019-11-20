@@ -28,4 +28,15 @@ public class Login_Register_Util {
         return randomString;
     }
 
+    public void validationName(String name) throws Exception {
+        if (name != null && name.trim().length() < 3) {
+            throw new Exception("Merci de saisir un nom de plus de 3 charactères.");
+        }
+
+        if (name != null && name.trim().length() < 3) {
+            throw new Exception("Merci de saisir un nom de plus de 3 charactères.");
+        }
+    }
 }
+
+

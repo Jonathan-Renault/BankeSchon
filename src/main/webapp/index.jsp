@@ -1,5 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.util.Objects" %>
+
+<!--------------------------------------------------- Restriction ----------------------------------------------------->
+<% HttpSession checkSession = request.getSession(false);
+    if (Objects.equals(checkSession.getAttribute("role"), 1)) {
+        response.sendRedirect(request.getContextPath() + "/interface.jsp");
+    } else if (Objects.equals(checkSession.getAttribute("role"), 2)) {
+        response.sendRedirect(request.getContextPath() + "/admin.jsp");
+    }
+%>
 
 <!DOCTYPE html>
 
@@ -30,11 +40,6 @@
                    placeholder="Mot de passe">
         </div>
         <input type="submit" value="Se connecter" class="btn btn-primary"/>
-        <%-- Vérification de la présence d'un objet utilisateur en session --%>
-        <c:if test="${!empty sessionScope.sessionUtilisateur}">
-            <%-- Si l'utilisateur existe en session, alors on affiche son adresse email. --%>
-            <p class="succes">Vous êtes connecté(e) avec l'adresse : ${sessionScope.sessionUtilisateur.email}</p>
-        </c:if>
     </form>
 </div>
 <!-------------------------------------------------- Dark mode -------------------------------------------------------->

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -50,6 +51,7 @@ public final class ConnexionForm {
                     System.out.println(result.getLogin());
                     System.out.println(result.getRole());
                     System.out.println(result.getPassword());
+
                 }
             }
         }
