@@ -78,14 +78,16 @@ public class Optimisation_algorithm extends HttpServlet {
                 offer_score.setName_offer(offer.getOffer_name());
                 offer_score.setScore(score);
                 scores.add(offer_score);
-            }
-            /*scores = algo.rankScores(scores);*/
-            Collections.sort(scores, Collections.reverseOrder());
-            for (Offer_score s: scores) {
-                System.out.println("NOM de l'offre: " + s.getName_offer() + " Score de l'offre: " + s.getScore());
+                score = 0;
             }
         }
-
         // classe le tableau scores du plus haut entier au plus bas
+        Collections.sort(scores, Collections.reverseOrder());
+        for (Offer_score s: scores) {
+            System.out.println("NOM de l'offre: " + s.getName_offer() + " Score de l'offre: " + s.getScore());
+        }
+        String firstOffer = scores.get(0).getName_offer();
+        String secondOffer = scores.get(1).getName_offer();
+        String thirdOffer = scores.get(2).getName_offer();
     }
 }

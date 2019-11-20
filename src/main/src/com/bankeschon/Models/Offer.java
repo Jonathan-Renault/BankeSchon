@@ -10,7 +10,7 @@ public class Offer extends BaseModelORM {
     private Integer maximum_age;
     private String recommanded_age; // plage d'âge, séparé par - (exemple: 18-30)
     private String recommanded_salary; // plage de salaire, séparé par - (exemple: 1000-2000)
-    private Integer recommanded_familial_situation; // 0 = celibataire, 1 = marié/pacsé, 2 = divorcé/veuf
+    private Integer recommanded_family_situation; // 0 = celibataire, 1 = marié/pacsé, 2 = divorcé/veuf
     private Integer recommanded_pro_situation; // 0 = sans emploi, 1 = employé, 2 = cadre, 3 = fonctionnaire, 4 = indé
 
     // 0 = neutre, 1 = recommandé, 2 = non recommandé
@@ -98,12 +98,12 @@ public class Offer extends BaseModelORM {
         return this;
     }
 
-    public Integer getRecommanded_familial_situation() {
-        return recommanded_familial_situation;
+    public Integer getRecommanded_family_situation() {
+        return recommanded_family_situation;
     }
 
-    public Offer setRecommanded_familial_situation(Integer recommanded_familial_situation) {
-        this.recommanded_familial_situation = recommanded_familial_situation;
+    public Offer setRecommanded_family_situation(Integer recommanded_family_situation) {
+        this.recommanded_family_situation = recommanded_family_situation;
 
         return this;
     }

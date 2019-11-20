@@ -102,12 +102,12 @@ public class Algorithm_utils {
                     else
                         return score;
             }
-        } else if (column.equals("familial_situation") || column.equals("pro_situation")) {
+        } else if (column.equals("family_situation") || column.equals("pro_situation")) {
             switch (column) {
-                case "familial_situation":
-                    if (result.get(0).getRecommanded_familial_situation() == 4)
+                case "family_situation":
+                    if (result.get(0).getRecommanded_family_situation() == 4)
                         return score+1;
-                    if (prospect.getFamily_situation().equals(result.get(0).getRecommanded_familial_situation()))
+                    if (prospect.getFamily_situation().equals(result.get(0).getRecommanded_family_situation()))
                         return score+1;
                     else
                         return score;
@@ -259,12 +259,5 @@ public class Algorithm_utils {
         }
         System.out.println("Erreur lors de la comparaison des infos client avec l'offre en cours (mauvais nom de colonne)");
         return score;
-    }
-
-    public ArrayList<Offer_score> rankScores (ArrayList<Offer_score> scores) {
-
-        //
-
-        return scores;
     }
 }
