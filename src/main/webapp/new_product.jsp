@@ -22,60 +22,64 @@
         </div>
         <div class="modal-body">
             <!------------------------------------ Form new product ------------------------------------->
-            <form>
+            <form method="post" action="produit">
                 <div class="form-group">
                     <label for="exampleInputName">Nom de l'offre</label>
-                    <input type="text" class="form-control" id="exampleInputName"
+                    <input type="text" name="offerName" class="form-control" id="exampleInputName"
                            aria-describedby="emailHelp"
                            placeholder="Nom">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputImportant">Priorité</label>
-                    <select class="form-control" id="exampleInputImportant">
-                        <option>Faible</option>
-                        <option>Moyen</option>
-                        <option>Forte</option>
+                    <select class="form-control" name="offerPriority" id="exampleInputImportant">
+                        <option value="1">Faible</option>
+                        <option value="2">Moyen</option>
+                        <option value="3">Forte</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputMin">Âge minimum</label>
-                    <input class="form-control" type="number" value="18" id="exampleInputMin">
+                    <input class="form-control" name="offerMinimumAge" type="number" value="18" id="exampleInputMin">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputMax">Âge maximum</label>
-                    <input class="form-control" type="number" value="60" id="exampleInputMax">
+                    <input class="form-control" name="offerMaximumAge" type="number" value="60" id="exampleInputMax">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputRecommandedAge">Plage d'âge recommandé</label>
                     <label for="exampleInputRecommandedAge2"></label>
-                    <input class="form-control" type="number" value="18" id="exampleInputRecommandedAge"> <br/>
-                    <input class="form-control" type="number" value="60" id="exampleInputRecommandedAge2">
+                    <input class="form-control" name="offerRecAge1" type="number" value="18"
+                           id="exampleInputRecommandedAge"> <br/>
+                    <input class="form-control" name="offerRecAge2" type="number" value="60"
+                           id="exampleInputRecommandedAge2">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputRecommandedSalary">Salaire Brut recommandé</label>
                     <label for="exampleInputRecommandedSalary2"></label>
-                    <input class="form-control" type="number" value="1270" id="exampleInputRecommandedSalary"> <br/>
-                    <input class="form-control" type="number" value="2000" id="exampleInputRecommandedSalary2">
+                    <input class="form-control" name="offerRecSalary1" type="number" value="1270"
+                           id="exampleInputRecommandedSalary"> <br/>
+                    <input class="form-control" name="offerRecSalary2" type="number" value="2000"
+                           id="exampleInputRecommandedSalary2">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFamilySituation">Situation familiale recommandé</label>
-                    <select class="form-control" id="exampleInputFamilySituation">
-                        <option>Célibataire</option>
-                        <option>Marié</option>
-                        <option>Divorcé</option>
-                        <option>Veuf</option>
-                        <option>Pacsé</option>
+                    <select class="form-control" name="offerRecFamily" id="exampleInputFamilySituation">
+                        <option value="1">Célibataire</option>
+                        <option value="2">Marié</option>
+                        <option value="3">Divorcé</option>
+                        <option value="4">Veuf</option>
+                        <option value="5">Pacsé</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputProSituation">Situation professionnelle recommandé</label>
-                    <select class="form-control" id="exampleInputProSituation">
-                        <option>Demandeur d'emploi</option>
-                        <option>Étudiant</option>
-                        <option>Indépendant</option>
-                        <option>Employé/Ouvrier</option>
-                        <option>Cadre</option>
-                        <option>Fonctionnaire</option>
+                    <select class="form-control" name="recProSituation" id="exampleInputProSituation">
+                        <option value="1">Demandeur d'emploi</option>
+                        <option value="2">Indépendant</option>
+                        <option value="3">Employé/Ouvrier</option>
+                        <option value="4">Cadre</option>
+                        <option value="5">Fonctionnaire</option>
+                        <option value="6">Tous</option>
                     </select>
                 </div>
                 <!------------------------------------------------Les types de dépenses--------------------------------------->
@@ -84,25 +88,25 @@
                 <fieldset class="form-group loyer">
                     <legend class="col-form-label col-sm-2 pt-0">Loyer</legend>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="loyer"
+                        <input class="form-check-input" type="radio" name="offerLoyer"
                                id="loyerNonRec"
-                               value="loyerNonRec" checked>
+                               value="1" checked>
                         <label class="form-check-label" for="loyerNonRec">
                             Non recommmandé
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="loyer"
+                        <input class="form-check-input" type="radio" name="offerLoyer"
                                id="loyerNeutre"
-                               value="loyerNeutre">
+                               value="0">
                         <label class="form-check-label" for="loyerNeutre">
                             Neutre
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="loyer"
+                        <input class="form-check-input" type="radio" name="offerLoyer"
                                id="loyerRec"
-                               value="loyerRec">
+                               value="2">
                         <label class="form-check-label" for="loyerRec">
                             Recommandé
                         </label>
@@ -112,25 +116,25 @@
                 <fieldset class="form-group assurances">
                     <legend class="col-form-label col-sm-2 pt-0">Assurances</legend>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="assurances"
+                        <input class="form-check-input" type="radio" name="offerAssurances"
                                id="assurancesNonRec"
-                               value="assurancesNonRec" checked>
+                               value="1" checked>
                         <label class="form-check-label" for="assurancesNonRec">
                             Non recommmandé
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="assurances"
+                        <input class="form-check-input" type="radio" name="offerAssurances"
                                id="assurancesNeutre"
-                               value="assurancesNeutre">
+                               value="0">
                         <label class="form-check-label" for="assurancesNeutre">
                             Neutre
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="assurances"
+                        <input class="form-check-input" type="radio" name="offerAssurances"
                                id="assurancesRec"
-                               value="assurancesRec">
+                               value="3">
                         <label class="form-check-label" for="assurancesRec">
                             Recommandé
                         </label>
@@ -140,25 +144,25 @@
                 <fieldset class="form-group sante">
                     <legend class="col-form-label col-sm-2 pt-0">Santé</legend>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sante"
+                        <input class="form-check-input" type="radio" name="offerSante"
                                id="santeNonRec"
-                               value="santeNonRec" checked>
+                               value="1" checked>
                         <label class="form-check-label" for="santeNonRec">
                             Non recommmandé
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sante"
+                        <input class="form-check-input" type="radio" name="offerSante"
                                id="santeNeutre"
-                               value="santeNeutre">
+                               value="0">
                         <label class="form-check-label" for="santeNeutre">
                             Neutre
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sante"
+                        <input class="form-check-input" type="radio" name="offerSante"
                                id="santeRec"
-                               value="santeRec">
+                               value="2">
                         <label class="form-check-label" for="santeRec">
                             Recommandé
                         </label>
@@ -168,25 +172,25 @@
                 <fieldset class="form-group vehicule">
                     <legend class="col-form-label col-sm-2 pt-0">Véhicule(s)</legend>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="vehicule"
+                        <input class="form-check-input" type="radio" name="offerVehicule"
                                id="vehiculeNonRec"
-                               value="vehiculeNonRec" checked>
+                               value="1" checked>
                         <label class="form-check-label" for="vehiculeNonRec">
                             Non recommmandé
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="vehicule"
+                        <input class="form-check-input" type="radio" name="offerVehicule"
                                id="vehiculeNeutre"
-                               value="vehiculeNeutre">
+                               value="0">
                         <label class="form-check-label" for="vehiculeNeutre">
                             Neutre
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="vehicule"
+                        <input class="form-check-input" type="radio" name="offerVehicule"
                                id="vehiculeRec"
-                               value="vehiculeRec">
+                               value="2">
                         <label class="form-check-label" for="vehiculeRec">
                             Recommandé
                         </label>
@@ -196,25 +200,25 @@
                 <fieldset class="form-group transports">
                     <legend class="col-form-label col-sm-2 pt-0">Transports</legend>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="transports"
+                        <input class="form-check-input" type="radio" name="offerTransports"
                                id="transportsNonRec"
-                               value="transportsNonRec" checked>
+                               value="1" checked>
                         <label class="form-check-label" for="transportsNonRec">
                             Non recommmandé
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="transports"
+                        <input class="form-check-input" type="radio" name="offerTransports"
                                id="transportsNeutre"
-                               value="transportsNeutre">
+                               value="0">
                         <label class="form-check-label" for="transportsNeutre">
                             Neutre
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="transports"
+                        <input class="form-check-input" type="radio" name="offerTransports"
                                id="transportsRec"
-                               value="transportsRec">
+                               value="2">
                         <label class="form-check-label" for="transportsRec">
                             Recommandé
                         </label>
@@ -224,25 +228,25 @@
                 <fieldset class="form-group communications">
                     <legend class="col-form-label col-sm-2 pt-0">Communications</legend>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="communications"
+                        <input class="form-check-input" type="radio" name="offerCommunications"
                                id="communicationsNonRec"
-                               value="communicationsNonRec" checked>
+                               value="1" checked>
                         <label class="form-check-label" for="communicationsNonRec">
                             Non recommmandé
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="communications"
+                        <input class="form-check-input" type="radio" name="offerCommunications"
                                id="communicationsNeutre"
-                               value="communicationsNeutre">
+                               value="0">
                         <label class="form-check-label" for="communicationsNeutre">
                             Neutre
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="communications"
+                        <input class="form-check-input" type="radio" name="offerCommunications"
                                id="communicationsRec"
-                               value="communicationsRec">
+                               value="2">
                         <label class="form-check-label" for="communicationsRec">
                             Recommandé
                         </label>
@@ -252,25 +256,25 @@
                 <fieldset class="form-group loisirs">
                     <legend class="col-form-label col-sm-2 pt-0">Loisirs</legend>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="loisirs"
+                        <input class="form-check-input" type="radio" name="offerLoisirs"
                                id="loisirsNonRec"
-                               value="loisirsNonRec" checked>
+                               value="1" checked>
                         <label class="form-check-label" for="loisirsNonRec">
                             Non recommmandé
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="loisirs"
+                        <input class="form-check-input" type="radio" name="offerLoisirs"
                                id="loisirsNeutre"
-                               value="loisirsNeutre">
+                               value="0">
                         <label class="form-check-label" for="loisirsNeutre">
                             Neutre
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="loisirs"
+                        <input class="form-check-input" type="radio" name="offerLoisirs"
                                id="loisirsRec"
-                               value="loisirsRec">
+                               value="2">
                         <label class="form-check-label" for="loisirsRec">
                             Recommandé
                         </label>
@@ -280,25 +284,25 @@
                 <fieldset class="form-group nourritures">
                     <legend class="col-form-label col-sm-2 pt-0">Nourritures</legend>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="nourritures"
+                        <input class="form-check-input" type="radio" name="offerNourritures"
                                id="nourrituresNonRec"
-                               value="nourrituresNonRec" checked>
+                               value="1" checked>
                         <label class="form-check-label" for="nourrituresNonRec">
                             Non recommmandé
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="nourritures"
+                        <input class="form-check-input" type="radio" name="offerNourritures"
                                id="nourrituresNeutre"
-                               value="nourrituresNeutre">
+                               value="0">
                         <label class="form-check-label" for="nourrituresNeutre">
                             Neutre
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="nourritures"
+                        <input class="form-check-input" type="radio" name="offerNourritures"
                                id="nourrituresRec"
-                               value="nourrituresRec">
+                               value="2">
                         <label class="form-check-label" for="nourrituresRec">
                             Recommandé
                         </label>
@@ -308,31 +312,31 @@
                 <fieldset class="form-group depenses">
                     <legend class="col-form-label col-sm-2 pt-0">Dépenses quotidiennes</legend>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="depenses"
+                        <input class="form-check-input" type="radio" name="offerDepenses"
                                id="depensesNonRec"
-                               value="depensesNonRec" checked>
+                               value="1" checked>
                         <label class="form-check-label" for="depensesNonRec">
                             Non recommmandé
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="depenses"
+                        <input class="form-check-input" type="radio" name="offerDepenses"
                                id="depensesNeutre"
-                               value="depensesNeutre">
+                               value="0">
                         <label class="form-check-label" for="depensesNeutre">
                             Neutre
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="depenses"
+                        <input class="form-check-input" type="radio" name="offerDepenses"
                                id="depensesRec"
-                               value="depensesRec">
+                               value="2">
                         <label class="form-check-label" for="depensesRec">
                             Recommandé
                         </label>
                     </div>
                 </fieldset>
-                <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+                <input type="submit" value="Enregistrer" class="btn btn-primary"/>
             </form>
         </div>
     </div>

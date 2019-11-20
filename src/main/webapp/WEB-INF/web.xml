@@ -45,6 +45,7 @@
     </servlet-mapping>
 
     <servlet>
+
         <servlet-name>Stat</servlet-name>
         <servlet-class>com.bankeschon.Servlet.Stat</servlet-class>
     </servlet>
@@ -52,6 +53,14 @@
     <servlet-mapping>
         <servlet-name>Stat</servlet-name>
         <url-pattern>/stati</url-pattern>
+
+        <servlet-name>Produit</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Produit</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Produit</servlet-name>
+        <url-pattern>/produit</url-pattern>
     </servlet-mapping>
 
     <servlet>

@@ -6,12 +6,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.List;
 
 import com.bankeschon.Models.Prospect;
 import com.bankeschon.Models.Offer;
-import com.bankeschon.Models.Offer_history;
 
 import com.bankeschon.Utils.Algorithm_utils;
 
