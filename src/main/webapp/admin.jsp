@@ -104,7 +104,7 @@
     </div>
     <!---------------------------------------------- Card Statistique ------------------------------------------------------->
     <div class="float">
-        <a href="stat.jsp">
+        <a href="query">
             <div class="card mb-3 card-margin">
                 <div class="row no-gutters">
                     <div class="col-md-4">
