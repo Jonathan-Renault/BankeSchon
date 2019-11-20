@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.bankeschon.Models.Offer_score;
@@ -74,10 +75,15 @@ public class Optimisation_algorithm extends HttpServlet {
                 // si oui, le score est ajouté au tableau scores, avec comme index le nom de l'offre
                 Offer_score offer_score = new Offer_score();
                 offer_score.setId_offer(offer.getId());
+                offer_score.setName_offer(offer.getOffer_name());
                 offer_score.setScore(score);
                 scores.add(offer_score);
             }
-            scores = algo.rankScores(scores);
+            /*scores = algo.rankScores(scores);*/
+            Collections.sort(scores, Collections.reverseOrder());
+            for (Offer_score s: scores) {
+                System.out.println("NOM de l'offre: " + s.getName_offer() + " Score de l'offre: " + s.getScore());
+            }
         }
 
         // classe le tableau scores du plus haut entier au plus bas
