@@ -45,13 +45,14 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>Admin</servlet-name>
-        <servlet-class>com.bankeschon.Servlet.Admin</servlet-class>
+        <servlet-name>Produit</servlet-name>
+        <servlet-class>com.bankeschon.Servlet.Produit</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Admin</servlet-name>
-        <url-pattern>/admin</url-pattern>
+        <servlet-name>Produit</servlet-name>
+        <url-pattern>/produit</url-pattern>
     </servlet-mapping>
+
 
 </web-app>
