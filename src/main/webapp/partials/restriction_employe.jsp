@@ -12,7 +12,7 @@
     if (checkSession.getAttribute("role") == null) {
         response.sendRedirect(request.getContextPath() + "/403.jsp");
     } else {
-        if (Objects.equals(checkSession.getAttribute("role"), 2)) {
+        if (!Objects.equals(checkSession.getAttribute("role"), 1)) {
             response.sendRedirect(request.getContextPath() + "/admin.jsp");
         }
     }

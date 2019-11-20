@@ -1,19 +1,20 @@
 package com.bankeschon.Models;
 
+import java.sql.Timestamp;
+
 public class Offer extends BaseModelORM {
     private String tableName = "offers";
 
     private Integer id;
     private String offer_name;
-    private Integer priority; // de 0 à 3
+    private Integer priority;
     private Integer minimum_age;
     private Integer maximum_age;
-    private String recommanded_age; // plage d'âge, séparé par - (exemple: 18-30)
-    private String recommanded_salary; // plage de salaire, séparé par - (exemple: 1000-2000)
-    private Integer recommanded_familial_situation; // 0 = celibataire, 1 = marié/pacsé, 2 = divorcé/veuf
-    private Integer recommanded_pro_situation; // 0 = sans emploi, 1 = employé, 2 = cadre, 3 = fonctionnaire, 4 = indé
+    private String recommanded_age;
+    private String recommanded_salary;
+    private Integer recommanded_family_situation;
+    private Integer recommanded_pro_situation;
 
-    // 0 = neutre, 1 = recommandé, 2 = non recommandé
     private Integer rent_spend_recommanded;
     private Integer insurance_spend_recommanded;
     private Integer health_spend_recommanded;
@@ -23,10 +24,18 @@ public class Offer extends BaseModelORM {
     private Integer hobby_spend_recommanded;
     private Integer food_spend_recommanded;
     private Integer daily_spend_recommanded;
-    //
 
-    private String   created_at; // à convertir en timestamp
-    private String   updated_at; // à convertir en timestamp
+    private Timestamp created_at;
+    private Timestamp updated_at;
+
+    @Override
+    public String getTableName() {
+        return tableName;
+    }
+
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
+    }
 
     public Integer getId() {
         return id;
@@ -34,7 +43,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setId(Integer id) {
         this.id = id;
-
         return this;
     }
 
@@ -44,7 +52,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setOffer_name(String offer_name) {
         this.offer_name = offer_name;
-
         return this;
     }
 
@@ -54,7 +61,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setPriority(Integer priority) {
         this.priority = priority;
-
         return this;
     }
 
@@ -64,7 +70,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setMinimum_age(Integer minimum_age) {
         this.minimum_age = minimum_age;
-
         return this;
     }
 
@@ -74,7 +79,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setMaximum_age(Integer maximum_age) {
         this.maximum_age = maximum_age;
-
         return this;
     }
 
@@ -84,7 +88,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setRecommanded_age(String recommanded_age) {
         this.recommanded_age = recommanded_age;
-
         return this;
     }
 
@@ -94,17 +97,15 @@ public class Offer extends BaseModelORM {
 
     public Offer setRecommanded_salary(String recommanded_salary) {
         this.recommanded_salary = recommanded_salary;
-
         return this;
     }
 
-    public Integer getRecommanded_familial_situation() {
-        return recommanded_familial_situation;
+    public Integer getRecommanded_family_situation() {
+        return recommanded_family_situation;
     }
 
-    public Offer setRecommanded_familial_situation(Integer recommanded_familial_situation) {
-        this.recommanded_familial_situation = recommanded_familial_situation;
-
+    public Offer setRecommanded_family_situation(Integer recommanded_family_situation) {
+        this.recommanded_family_situation = recommanded_family_situation;
         return this;
     }
 
@@ -114,7 +115,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setRecommanded_pro_situation(Integer recommanded_pro_situation) {
         this.recommanded_pro_situation = recommanded_pro_situation;
-
         return this;
     }
 
@@ -124,7 +124,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setRent_spend_recommanded(Integer rent_spend_recommanded) {
         this.rent_spend_recommanded = rent_spend_recommanded;
-
         return this;
     }
 
@@ -134,7 +133,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setInsurance_spend_recommanded(Integer insurance_spend_recommanded) {
         this.insurance_spend_recommanded = insurance_spend_recommanded;
-
         return this;
     }
 
@@ -144,7 +142,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setHealth_spend_recommanded(Integer health_spend_recommanded) {
         this.health_spend_recommanded = health_spend_recommanded;
-
         return this;
     }
 
@@ -154,7 +151,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setCar_spend_recommanded(Integer car_spend_recommanded) {
         this.car_spend_recommanded = car_spend_recommanded;
-
         return this;
     }
 
@@ -164,7 +160,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setTransport_spend_recommanded(Integer transport_spend_recommanded) {
         this.transport_spend_recommanded = transport_spend_recommanded;
-
         return this;
     }
 
@@ -174,7 +169,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setCommunication_spend_recommanded(Integer communication_spend_recommanded) {
         this.communication_spend_recommanded = communication_spend_recommanded;
-
         return this;
     }
 
@@ -184,7 +178,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setHobby_spend_recommanded(Integer hobby_spend_recommanded) {
         this.hobby_spend_recommanded = hobby_spend_recommanded;
-
         return this;
     }
 
@@ -194,7 +187,6 @@ public class Offer extends BaseModelORM {
 
     public Offer setFood_spend_recommanded(Integer food_spend_recommanded) {
         this.food_spend_recommanded = food_spend_recommanded;
-
         return this;
     }
 
@@ -204,32 +196,25 @@ public class Offer extends BaseModelORM {
 
     public Offer setDaily_spend_recommanded(Integer daily_spend_recommanded) {
         this.daily_spend_recommanded = daily_spend_recommanded;
-
         return this;
     }
 
-    public String getCreated_at() {
+    public Timestamp getCreated_at() {
         return created_at;
     }
 
-    public Offer setCreated_at(String created_at) {
+    public Offer setCreated_at(Timestamp created_at) {
         this.created_at = created_at;
-
         return this;
     }
 
-    public String getUpdated_at() {
+    public Timestamp getUpdated_at() {
         return updated_at;
     }
 
-    public Offer setUpdated_at(String updated_at) {
+    public Offer setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
-
         return this;
     }
-    @Override
-    public String getTableName()
-    {
-        return this.tableName;
-    }
+
 }

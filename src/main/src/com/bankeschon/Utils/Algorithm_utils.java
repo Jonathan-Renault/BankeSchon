@@ -1,15 +1,13 @@
 package com.bankeschon.Utils;
 
-import com.bankeschon.Models.Offer;
 import com.bankeschon.Models.Prospect;
 import com.bankeschon.Models.Offer_history;
+import com.bankeschon.Models.Offer;
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Locale;
 
 public class Algorithm_utils {
     public Prospect lastProspectModified (Integer id) {
@@ -105,7 +103,7 @@ public class Algorithm_utils {
         } else if (column.equals("familial_situation") || column.equals("pro_situation")) {
             switch (column) {
                 case "familial_situation":
-                    if (prospect.getFamily_situation().equals(result.get(0).getRecommanded_familial_situation()))
+                    if (prospect.getFamily_situation().equals(result.get(0).getRecommanded_family_situation()))
                         return score+1;
                     else
                         return score;
