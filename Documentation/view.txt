@@ -4,12 +4,21 @@ From (SELECT MAX(number)
 FROM family_situation
 group by number) AS bla
 
-Combien de vente hier FAIT 1 et 30
+Combien de vente hier FAIT 1
 CREATE VIEW sellsuccess_1 AS
 select count(*)
 FROM (SELECT id_user
 FROM history
 WHERE created_at = date(now())-1
+AND accepted = true
+GROUP BY id_user) AS bla
+
+Combien de vente hier FAIT 30
+CREATE VIEW sellsuccess_30 AS
+select count(*)
+FROM (SELECT id_user
+FROM history
+WHERE created_at > date(now())-30
 AND accepted = true
 GROUP BY id_user) AS bla
 
@@ -83,7 +92,20 @@ ORDER BY count(id_offer) DESC
 LIMIT 1
 ) AS bla
 
-Produit le plus vendu hier FAIT 1 et 30
+Meilleur vendeur hier FAIT 30
+CREATE VIEW bestseller_1 AS
+SELECT *
+FROM (
+SELECT id_user, count(id_offer)
+FROM history
+WHERE accepted = true
+AND created_at > date(now())-30
+GROUP BY id_user
+ORDER BY count(id_offer) DESC
+LIMIT 1
+) AS bla
+
+Produit le plus vendu hier FAIT
 CREATE VIEW mostsell_1 AS
 SELECT *
 FROM (
@@ -91,6 +113,19 @@ SELECT id_offer, count(id_offer)
 FROM history
 WHERE accepted = true
 AND created_at = date(now())-1
+GROUP BY id_offer
+ORDER BY count(id_offer) DESC
+LIMIT 1
+) AS bla
+
+Produit le plus vendu hier FAIT 30
+CREATE VIEW mostsell_30 AS
+SELECT *
+FROM (
+SELECT id_offer, count(id_offer)
+FROM history
+WHERE accepted = true
+AND created_at > date(now())-30
 GROUP BY id_offer
 ORDER BY count(id_offer) DESC
 LIMIT 1
