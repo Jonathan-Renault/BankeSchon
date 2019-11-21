@@ -60,7 +60,7 @@
                     <!-------------------------------------- Button trigger modal ------------------------------------->
                     <button type="button" class="btn btn-link btn-support" data-toggle="modal"
                             data-target="#exampleModal">
-                        Support
+                        Contacter
                     </button>
                     <!-------------------------------------------- Light & Night mode ------------------------->
                     <div class="theme-switch-wrapper">
@@ -68,7 +68,7 @@
                             <input type="checkbox" id="checkbox"/>
                             <div class="slider round"></div>
                         </label>
-                        <br/> <em>Activer le mode nuit</em>
+                        <br/> <em>Mode nuit</em>
                     </div>
                 </div>
             </div>

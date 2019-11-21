@@ -15,8 +15,8 @@
 
     <nav class="navbar-search">
         <form class="form-navbar-search">
-            <input class="input-search" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn-search" type="submit">Search</button>
+            <input class="input-search" type="search" placeholder="Rechercher" aria-label="Search">
+            <button class="btn-search" type="submit">Rechercher</button>
         </form>
     </nav>
     <br/>
@@ -27,7 +27,7 @@
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Email</th>
-                <th scope="col">Status</th>
+                <th scope="col">Statut</th>
                 <th scope="col"></th>
             </tr>
             </thead>

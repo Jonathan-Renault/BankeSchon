@@ -3,6 +3,7 @@
 <!--------------------------------------------------- Modal contact --------------------------------------------------->
 <%@include file="partials/modal_contact.jsp" %>
 <!--------------------------------------------------- Restriction ----------------------------------------------------->
+<%@include file="partials/restriction_admin.jsp" %>
 
 <!-------------------------------------------- Page de création d'un utilisateur -------------------------------------->
 <a href="admin.jsp">
@@ -16,7 +17,7 @@
         <h2 class="text-center">Créer un nouvel utilisateur</h2>
         <div class="form-group">
             <label for="exampleInputEmail1">Adresse Email</label>
-            <input type="email" class="form-control" value="${param.email}" name="email" id="exampleInputEmail1"
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1"
                    aria-describedby="emailHelp"
                    placeholder="Entrer Email">
         </div>

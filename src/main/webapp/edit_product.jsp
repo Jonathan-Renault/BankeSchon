@@ -16,8 +16,8 @@
 
     <nav class="navbar-search">
         <form class="form-navbar-search">
-            <input class="input-search" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn-search" type="submit">Search</button>
+            <input class="input-search" type="search" placeholder="Rechercher" aria-label="Search">
+            <button class="btn-search" type="submit">Rechercher</button>
         </form>
     </nav>
     <br/>

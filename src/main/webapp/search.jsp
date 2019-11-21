@@ -12,8 +12,8 @@
 
 <nav class="navbar-search">
     <form class="form-navbar-search">
-        <input class="input-search" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn-search" type="submit">Search</button>
+        <input class="input-search" type="RechercherF" placeholder="Search" aria-label="Search">
+        <button class="btn-search" type="submit">Rechercher</button>
     </form>
 </nav>
 
@@ -273,9 +273,9 @@
             </thead>
             <tbody>
             <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>Charles</td>
+                <td>Edward</td>
+                <td>CharlesEdward@gmail.com</td>
                 <td>
                     <button type="button" class="btn btn-link" data-toggle="modal"
                             data-target="#ModalDetailsUser">

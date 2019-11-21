@@ -46,7 +46,7 @@
                     <input class="form-control" name="offerMaximumAge" type="number" value="60" id="exampleInputMax">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputRecommandedAge">Plage d'âge recommandé</label>
+                    <label for="exampleInputRecommandedAge">Plage d'âge recommandée</label>
                     <label for="exampleInputRecommandedAge2"></label>
                     <input class="form-control" name="offerRecAge1" type="number" value="18"
                            id="exampleInputRecommandedAge"> <br/>
@@ -62,28 +62,29 @@
                            id="exampleInputRecommandedSalary2">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputFamilySituation">Situation familiale recommandé</label>
+                    <label for="exampleInputFamilySituation">Situation familiale recommandée</label>
                     <select class="form-control" name="offerRecFamily" id="exampleInputFamilySituation">
                         <option value="1">Célibataire</option>
                         <option value="2">Marié</option>
                         <option value="3">Divorcé</option>
                         <option value="4">Veuf</option>
                         <option value="5">Pacsé</option>
+                        <option value="6">Aucune</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputProSituation">Situation professionnelle recommandé</label>
+                    <label for="exampleInputProSituation">Situation professionnelle recommandée</label>
                     <select class="form-control" name="recProSituation" id="exampleInputProSituation">
                         <option value="1">Demandeur d'emploi</option>
                         <option value="2">Indépendant</option>
                         <option value="3">Employé/Ouvrier</option>
                         <option value="4">Cadre</option>
                         <option value="5">Fonctionnaire</option>
-                        <option value="6">Tous</option>
+                        <option value="6">Aucune</option>
                     </select>
                 </div>
                 <!------------------------------------------------Les types de dépenses--------------------------------------->
-                <h5>Les types de dépense</h5>
+                <h5>Les types de dépenses</h5>
                 <!------------------------------------------------Loyer--------------------------------------->
                 <fieldset class="form-group loyer">
                     <legend class="col-form-label col-sm-2 pt-0">Loyer</legend>
@@ -92,7 +93,7 @@
                                id="loyerNonRec"
                                value="1" checked>
                         <label class="form-check-label" for="loyerNonRec">
-                            Non recommmandé
+                            Non recommandé
                         </label>
                     </div>
                     <div class="form-check">
@@ -120,7 +121,7 @@
                                id="assurancesNonRec"
                                value="1" checked>
                         <label class="form-check-label" for="assurancesNonRec">
-                            Non recommmandé
+                            Non recommandé
                         </label>
                     </div>
                     <div class="form-check">
@@ -148,7 +149,7 @@
                                id="santeNonRec"
                                value="1" checked>
                         <label class="form-check-label" for="santeNonRec">
-                            Non recommmandé
+                            Non recommandé
                         </label>
                     </div>
                     <div class="form-check">
@@ -176,7 +177,7 @@
                                id="vehiculeNonRec"
                                value="1" checked>
                         <label class="form-check-label" for="vehiculeNonRec">
-                            Non recommmandé
+                            Non recommandé
                         </label>
                     </div>
                     <div class="form-check">
@@ -204,7 +205,7 @@
                                id="transportsNonRec"
                                value="1" checked>
                         <label class="form-check-label" for="transportsNonRec">
-                            Non recommmandé
+                            Non recommandé
                         </label>
                     </div>
                     <div class="form-check">
@@ -232,7 +233,7 @@
                                id="communicationsNonRec"
                                value="1" checked>
                         <label class="form-check-label" for="communicationsNonRec">
-                            Non recommmandé
+                            Non recommandé
                         </label>
                     </div>
                     <div class="form-check">
@@ -260,7 +261,7 @@
                                id="loisirsNonRec"
                                value="1" checked>
                         <label class="form-check-label" for="loisirsNonRec">
-                            Non recommmandé
+                            Non recommandé
                         </label>
                     </div>
                     <div class="form-check">
@@ -288,7 +289,7 @@
                                id="nourrituresNonRec"
                                value="1" checked>
                         <label class="form-check-label" for="nourrituresNonRec">
-                            Non recommmandé
+                            Non recommandé
                         </label>
                     </div>
                     <div class="form-check">
@@ -316,7 +317,7 @@
                                id="depensesNonRec"
                                value="1" checked>
                         <label class="form-check-label" for="depensesNonRec">
-                            Non recommmandé
+                            Non recommandé
                         </label>
                     </div>
                     <div class="form-check">
