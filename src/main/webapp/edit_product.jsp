@@ -34,7 +34,24 @@
             <tbody>
             <tr>
                 <th scope="row">Assurance</th>
-                <td>04/11/2019</td>
+                <td>2019-11-14 15:55:46</td>
+                <td>
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                            data-target="#exampleModalEditProduct">
+                        Modifier ce produit
+                    </button>
+                </td>
+                <td>
+                    <form class="" method="post">
+                        <input name="inputHiddenValue" type="hidden" value="">
+                        <input type="submit" class="btn btn-outline-danger" name="submittedDelProduct"
+                               value="Supprimer ce produit">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Crédit auto</th>
+                <td>2019-11-21 10:53:46</td>
                 <td>
                     <button type="button" class="btn btn-outline-primary" data-toggle="modal"
                             data-target="#exampleModalEditProduct">

@@ -65,7 +65,7 @@
             </tr>
             <tr>
                 <td>Salaire Net Mensuel</td>
-                <td class="lighter">1€</td>
+                <td class="lighter">1900€</td>
             </tr>
             <tr>
                 <td>Type de dépenses régulières</td>
