@@ -45,6 +45,7 @@
 <div class="denied">
     <p class="denied-403">404</p>
     <p class="denied-access">Not found</p>
+    <a href="interface.jsp">Retourner à l'accueil</a>
 </div>
 </body>
 </html>

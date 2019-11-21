@@ -49,20 +49,19 @@
             <tbody>
             <tr>
                 <td>Situation professionnelle</td>
-                <td class="lighter">Recherche d'emploi
-                </td>
+                <td class="lighter">Cadre</td>
             </tr>
             <tr>
                 <td>Dernier appel</td>
-                <td class="lighter">Datetime</td>
+                <td class="lighter">2019-11-21 10:53:46</td>
             </tr>
             <tr>
-                <td>Nombre d'appel</td>
-                <td class="lighter">Number</td>
+                <td>Nombre d'appels</td>
+                <td class="lighter">2</td>
             </tr>
             <tr>
                 <td>Offre adaptée</td>
-                <td class="lighter">Pôle emploi ?</td>
+                <td class="lighter">Crédit Auto</td>
             </tr>
             <tr>
                 <td>Salaire Net Mensuel</td>
@@ -103,8 +102,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title"><img src="img/bankeschon_logo.svg" width="30"
-                                                                        height="30"
-                                                                        class="d-inline-block align-top" alt="">&nbsp;
+                                                 height="30"
+                                                 class="d-inline-block align-top" alt="">&nbsp;
                         Modifier ce profil</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -250,8 +249,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title"><img src="img/bankeschon_logo.svg" width="30"
-                                                                        height="30"
-                                                                        class="d-inline-block align-top" alt="">&nbsp;
+                                                 height="30"
+                                                 class="d-inline-block align-top" alt="">&nbsp;
                         Inscrire ce prospect</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -336,8 +335,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title"><img src="img/bankeschon_logo.svg" width="30"
-                                                                    height="30"
-                                                                    class="d-inline-block align-top" alt="">&nbsp;
+                                             height="30"
+                                             class="d-inline-block align-top" alt="">&nbsp;
                     Détails des dépenses</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -364,8 +363,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title"><img src="img/bankeschon_logo.svg" width="30"
-                                                                    height="30"
-                                                                    class="d-inline-block align-top" alt="">&nbsp;
+                                             height="30"
+                                             class="d-inline-block align-top" alt="">&nbsp;
                     Détails des offres</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
