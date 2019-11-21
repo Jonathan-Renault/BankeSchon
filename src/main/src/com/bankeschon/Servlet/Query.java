@@ -113,7 +113,7 @@ public class Query extends HttpServlet {
         Integer howmanycall_1_int = Integer.parseInt(howmanycall_1s);
         Integer sellsuccess_1_int = Integer.parseInt(sellsuccess_1s);
 
-        Float suscription_rate_1 = (Float.valueOf(howmanycall_1_int / sellsuccess_1_int)) * 100;
+        Float suscription_rate_1 = ((float)sellsuccess_1_int /  howmanycall_1_int) * 100;
         request.setAttribute( "suscription_rate_1", suscription_rate_1 );
 
 
@@ -121,7 +121,7 @@ public class Query extends HttpServlet {
         Integer howmanycall_30_int = Integer.parseInt(howmanycall_30s);
         Integer sellsuccess_30_int = Integer.parseInt(sellsuccess_30s);
 
-        Float suscription_rate_30 = (Float.valueOf(howmanycall_30_int / sellsuccess_30_int)) * 100;
+        Float suscription_rate_30 = ((float) sellsuccess_30_int /  howmanycall_30_int) * 100;
         request.setAttribute( "suscription_rate_30", suscription_rate_30 );
 
         // conversion_rate
@@ -131,11 +131,11 @@ public class Query extends HttpServlet {
         Float conversion_rate = ((float)howmanyprospect_iscustomer_int / h_int) * 100f;
         request.setAttribute( "conversion_rate", conversion_rate );
 
-        System.out.println(howmanyprospect_iscustomer_int);
+        System.out.println(howmanycall_1_int);
         System.out.println("/");
-        System.out.println(h_int);
+        System.out.println(sellsuccess_1_int);
         System.out.println("=");
-        System.out.println(conversion_rate);
+        System.out.println(suscription_rate_1);
 
         this.getServletContext().getRequestDispatcher( "/stat.jsp" ).forward( request, response );
 

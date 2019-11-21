@@ -10,10 +10,11 @@ public class Offer extends BaseModelORM {
     private Integer priority;
     private Integer minimum_age;
     private Integer maximum_age;
-    private String recommanded_age;
-    private String recommanded_salary;
-    private Integer recommanded_family_situation;
-    private Integer recommanded_pro_situation;
+
+    private String recommanded_age; // plage d'âge, séparé par - (exemple: 18-30)
+    private String recommanded_salary; // plage de salaire, séparé par - (exemple: 1000-2000)
+    private Integer recommanded_family_situation; // 0 = celibataire, 1 = marié/pacsé, 2 = divorcé/veuf
+    private Integer recommanded_pro_situation; // 0 = sans emploi, 1 = employé, 2 = cadre, 3 = fonctionnaire, 4 = indé
 
     private Integer rent_spend_recommanded;
     private Integer insurance_spend_recommanded;
