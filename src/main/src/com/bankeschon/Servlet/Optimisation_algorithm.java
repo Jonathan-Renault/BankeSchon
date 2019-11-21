@@ -29,7 +29,7 @@ public class Optimisation_algorithm extends HttpServlet {
         Algorithm_utils algo = new Algorithm_utils();
 
         // définition des variables nécessaires au déroulé de l'algorithme
-        Integer id_prospect = 7;        //test, à modifier pour récupérer le vrai id
+        Integer id_prospect = 6;        //test, à modifier pour récupérer le vrai id
         Prospect prospect;
         Integer score = 0;
         ArrayList<Offer_score> scores = new ArrayList<Offer_score>();
@@ -82,9 +82,15 @@ public class Optimisation_algorithm extends HttpServlet {
         }
         // classe le tableau scores du plus haut entier au plus bas
         Collections.sort(scores, Collections.reverseOrder());
-        String firstOffer = scores.get(0).getName_offer();
-        String secondOffer = scores.get(1).getName_offer();
-        String thirdOffer = scores.get(2).getName_offer();
+
+        String firstOffer = null;
+        String secondOffer = null;
+        String thirdOffer = null;
+        if (!(1 > scores.size())) {firstOffer = scores.get(0).getName_offer();}
+        if (!(2 > scores.size())) {secondOffer = scores.get(1).getName_offer();}
+        if (!(3 > scores.size())) {thirdOffer = scores.get(2).getName_offer();}
+
+
         algo.updateOffersRecommanded (firstOffer, secondOffer, thirdOffer, prospect);
     }
 }
