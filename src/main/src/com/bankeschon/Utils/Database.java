@@ -12,8 +12,8 @@ public class Database {
     //private static String password = System.getenv("password");
     private static Connection dbConnection = null;
     private static String database  = "bankeschon";
-    private static String user      = "yamna";
-    private static String password  = "Niquetamere4ever";
+    private static String user      = "postgres";
+    private static String password  = "postgres";
 
     public static void connect()
     {
