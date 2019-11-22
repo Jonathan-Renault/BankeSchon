@@ -23,8 +23,8 @@ query_to_array(connection, customers_to_contact, query)
 length = len(customers_to_contact)
 for i in range(0, length):
     customers_json = json.dumps(customers_to_contact[i], default=str)
-    with open("../src/main/webapp/WEB-INF/prospects_output.json", "w") as f:
-        json.dump(customers_json, f)
+    print(customers_json)
+
 
 
 

@@ -18,7 +18,7 @@ connection = psycopg2.connect(database=os.getenv('DB_NAME'),
 
 # Récuperation des donnees client
 
-query = '''SELECT surname, name, mail ,adapted_offers from prospects where is_customer = 2 order by id'''
+query = '''SELECT surname, name, mail ,adapted_offers from prospects where is_customer = 1 order by id'''
 
 customers_array = []
 query_to_array(connection, customers_array, query)
@@ -48,7 +48,8 @@ for i in range(0, length):
                     <p>Merci de votre fidelité !</p>
                     <p>Nous vous proposons ces offres personnalisees :
                     <br>
-                    {adapted_offers}</p>
+                    {adapted_offers}
+                    </p>
                     <br>
                     <a href="google.fr" style="background:linear-gradient(135deg, #00CA94, #00A5E9);
                     padding:10px;border:2px solid;border-image:linear-gradient(135deg, #00CA94, #00A5E9) 20;
