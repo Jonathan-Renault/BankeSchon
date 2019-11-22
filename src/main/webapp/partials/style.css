@@ -317,7 +317,7 @@ input:checked + .slider:before {
 }
 
 .input-search {
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
