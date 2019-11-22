@@ -23,6 +23,10 @@ https://www.java.com/fr/download/
 ```
 http://apache.mirrors.benatherton.com/tomcat/tomcat-9/v9.0.27/bin/apache-tomcat-9.0.27.zip
 ```
+* Python 3.8.0
+```
+https://www.python.org/downloads/
+```
 ### Installing
 
 Les étapes pas à pas d'installation d'une version de devellopement fonctionnelle
@@ -41,9 +45,16 @@ Laisser les mises à jour / Let's the update do
 Jusqu'à la fin / Until finished
 ```
 
+Installer l'interpreteur Pyhon / Install Python interpreter
+
+```
+Jusqu'à la fin / Until finished
+```
+
 ## Built With
 
-* [Java](https://www.java.com/fr) - Le Langage utilisé / The Language used
+* [Java](https://www.java.com/fr) - Le Langage utilisé pour l'application / The Language used for the apps
+* [Python](https://www.python.org/) - Le Langage utilisé pour les script / The Language used for scripts
 * [Maven](https://maven.apache.org/) - Manager de dépendance / Dependency management
 * [Tomcat](https://tomcat.apache.org/index.html) - Conteneur web libre de servlets et JSP / Implementation of the Java technologies
 * [Postgres](https://www.postgresql.org/) - Systeme Open source de base de données relationnelles et objet / Open source object-relational database system
