@@ -34,7 +34,7 @@
             <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td>email@gmail.com</td>
+                <td>michel@admin.fr</td>
                 <td>Administrateur</td>
                 <td>
                     <form class="" method="post">
@@ -46,19 +46,7 @@
             </tr>
             <tr>
                 <th scope="row">2</th>
-                <td>email@gmail.com</td>
-                <td>Employé</td>
-                <td>
-                    <form class="" method="post">
-                        <input name="inputHiddenValue" type="hidden" value="">
-                        <input type="submit" class="btn btn-outline-danger" name="submittedDelUser"
-                               value="Supprimer cet utilisateur">
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>email@gmail.com</td>
+                <td>employe@gmail.com</td>
                 <td>Employé</td>
                 <td>
                     <form class="" method="post">
