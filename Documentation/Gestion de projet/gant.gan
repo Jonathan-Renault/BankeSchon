@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="BankeSchön" company="Margoulin Cie" webLink="http://" view-date="2019-10-15" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.10" locale="fr">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="158" order="0"/>
+        <field id="tpd4" name="Date de début" width="62" order="1"/>
+        <field id="tpd5" name="Date de fin" width="61" order="2"/>
+        <timeline><![CDATA[1]]></timeline>
+        <option id="color.recent"><![CDATA[#ff0033 #33ff33 #0033cc #ffff00 #ff9900 #f4f4f4 #000000 #cccccc]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="206" order="0"/>
+        <field id="1" name="Rôle par défaut" width="90" order="1"/>
+    </view>
+    <!-- -->
+    <calendars base-id="france">
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="" month="1" date="1" type="HOLIDAY"><![CDATA[New Year's Day]]></date>
+        <date year="" month="5" date="1" type="HOLIDAY"><![CDATA[Labour Day]]></date>
+        <date year="" month="5" date="8" type="HOLIDAY"><![CDATA[V-E Day]]></date>
+        <date year="" month="7" date="14" type="HOLIDAY"><![CDATA[Bastille Day]]></date>
+        <date year="" month="8" date="15" type="HOLIDAY"><![CDATA[Assumption Day]]></date>
+        <date year="" month="11" date="1" type="HOLIDAY"><![CDATA[All Saints Day]]></date>
+        <date year="" month="11" date="11" type="HOLIDAY"><![CDATA[Armistice Day]]></date>
+        <date year="" month="12" date="25" type="HOLIDAY"><![CDATA[Christmas Day]]></date>
+        <date year="2008" month="5" date="12" type="HOLIDAY"><![CDATA[Whitmonday]]></date>
+        <date year="2009" month="6" date="1" type="HOLIDAY"><![CDATA[Whitmonday]]></date>
+        <date year="2009" month="7" date="13" type="NEUTRAL"><![CDATA[Bastille Day]]></date>
+        <date year="2010" month="4" date="5" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2010" month="5" date="13" type="HOLIDAY"><![CDATA[Ascension Day]]></date>
+        <date year="2010" month="5" date="24" type="HOLIDAY"><![CDATA[Whitmonday]]></date>
+        <date year="2011" month="4" date="25" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2011" month="5" date="29" type="NEUTRAL"><![CDATA[Mothers Day]]></date>
+        <date year="2011" month="6" date="2" type="HOLIDAY"><![CDATA[Ascension Day]]></date>
+        <date year="2011" month="6" date="13" type="HOLIDAY"><![CDATA[Whitmonday]]></date>
+        <date year="2011" month="6" date="19" type="NEUTRAL"><![CDATA[Fathers Day]]></date>
+        <date year="2012" month="1" date="2" type="HOLIDAY"><![CDATA[New Years Day (in lieu)]]></date>
+        <date year="2012" month="4" date="9" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2012" month="5" date="17" type="HOLIDAY"><![CDATA[Ascension Day]]></date>
+        <date year="2012" month="5" date="28" type="HOLIDAY"><![CDATA[Whitmonday]]></date>
+        <date year="2012" month="6" date="3" type="NEUTRAL"><![CDATA[Mothers Day]]></date>
+        <date year="2012" month="6" date="17" type="NEUTRAL"><![CDATA[Fathers Day]]></date>
+        <date year="2012" month="11" date="12" type="HOLIDAY"><![CDATA[Armistice Day (in Lieu)]]></date>
+        <date year="2012" month="12" date="25" type="HOLIDAY"><![CDATA[Christmas Day]]></date>
+        <date year="2013" month="4" date="1" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2013" month="5" date="9" type="HOLIDAY"><![CDATA[Ascension Day]]></date>
+        <date year="2013" month="5" date="20" type="HOLIDAY"><![CDATA[Whitmonday]]></date>
+        <date year="2013" month="5" date="26" type="NEUTRAL"><![CDATA[Mothers Day]]></date>
+        <date year="2013" month="6" date="16" type="NEUTRAL"><![CDATA[Fathers Day]]></date>
+        <date year="2014" month="4" date="21" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2014" month="5" date="25" type="NEUTRAL"><![CDATA[Mothers Day]]></date>
+        <date year="2014" month="5" date="29" type="NEUTRAL"><![CDATA[Ascension Day]]></date>
+        <date year="2014" month="6" date="9" type="HOLIDAY"><![CDATA[Whitmonday]]></date>
+        <date year="2014" month="6" date="15" type="HOLIDAY"><![CDATA[Fathers Day]]></date>
+        <date year="2015" month="4" date="6" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2015" month="5" date="14" type="HOLIDAY"><![CDATA[Ascension Day]]></date>
+        <date year="2015" month="5" date="24" type="NEUTRAL"><![CDATA[Mothers Day]]></date>
+        <date year="2015" month="5" date="25" type="HOLIDAY"><![CDATA[Whitmonday]]></date>
+        <date year="2015" month="6" date="21" type="NEUTRAL"><![CDATA[Fathers Day]]></date>
+        <date year="2016" month="3" date="28" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2016" month="5" date="5" type="HOLIDAY"><![CDATA[Ascension Day]]></date>
+        <date year="2016" month="5" date="16" type="HOLIDAY"><![CDATA[Whitmonday]]></date>
+        <date year="2016" month="5" date="29" type="NEUTRAL"><![CDATA[Mothers Day]]></date>
+        <date year="2016" month="6" date="19" type="NEUTRAL"><![CDATA[Fathers Day]]></date>
+        <date year="2016" month="12" date="26" type="HOLIDAY"><![CDATA[Christmas Day (observed)]]></date>
+        <date year="2017" month="4" date="17" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2017" month="5" date="25" type="HOLIDAY"><![CDATA[Ascension Day]]></date>
+        <date year="2017" month="5" date="28" type="NEUTRAL"><![CDATA[Mother's Day]]></date>
+        <date year="2017" month="6" date="5" type="HOLIDAY"><![CDATA[Whitmonday]]></date>
+        <date year="2017" month="6" date="18" type="NEUTRAL"><![CDATA[Father's Day]]></date>
+        <date year="2018" month="4" date="2" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2018" month="5" date="10" type="HOLIDAY"><![CDATA[Ascension Day]]></date>
+        <date year="2018" month="5" date="21" type="HOLIDAY"><![CDATA[Whit Monday]]></date>
+        <date year="2018" month="5" date="27" type="NEUTRAL"><![CDATA[Mother's Day]]></date>
+        <date year="2018" month="6" date="17" type="NEUTRAL"><![CDATA[Father's Day]]></date>
+        <date year="2019" month="4" date="22" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2019" month="5" date="30" type="HOLIDAY"><![CDATA[Ascension Day]]></date>
+        <date year="2019" month="6" date="10" type="HOLIDAY"><![CDATA[Whit Monday]]></date>
+        <date year="2019" month="5" date="26" type="NEUTRAL"><![CDATA[Mother's Day]]></date>
+        <date year="2019" month="6" date="16" type="NEUTRAL"><![CDATA[Father's Day]]></date>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="1" name="Légende" color="#000000" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2019-10-07" duration="33" complete="0" thirdDate="2019-10-09" thirdDate-constraint="0" priority="3" expand="true">
+            <notes><![CDATA[Administratif > Rouge
+Front > Bleu
+Back > Orange
+BDD > Gris
+Cours > Vert
+Déco > Noir]]></notes>
+        </task>
+        <task id="49" name="Conception" color="#000000" meeting="false" start="2019-10-08" duration="3" complete="100" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
+            <task id="84" name="Cahier des charges" color="#ff0033" meeting="false" start="2019-10-08" duration="3" complete="100" thirdDate="2019-10-09" thirdDate-constraint="0" expand="true"/>
+            <task id="85" name="Charte graphique" color="#ff0033" meeting="false" start="2019-10-09" duration="2" complete="100" thirdDate="2019-10-09" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="86" name="Proposition commercial" color="#ff0033" meeting="false" start="2019-10-09" duration="1" complete="100" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+            <task id="87" name="Form BDD peuplement" color="#ff0033" meeting="false" start="2019-10-09" duration="1" complete="100" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+            <task id="88" name="BDD + Schema BDD et reseau" color="#cccccc" meeting="false" start="2019-10-09" duration="2" complete="100" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="36" name="Cours de JAVA" color="#33ff33" meeting="false" start="2019-10-11" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+        <task id="53" name="Planification S1" color="#000000" meeting="false" start="2019-10-14" duration="4" complete="100" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
+            <task id="92" name="Reprise Gant" color="#ff0033" meeting="false" start="2019-10-14" duration="1" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
+            <task id="93" name="Reprise BDD" color="#cccccc" meeting="false" start="2019-10-14" duration="1" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
+            <task id="121" name="Gestion" color="#ff0033" meeting="false" start="2019-10-14" duration="1" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
+            <task id="122" name="Mentions légales" color="#0033cc" meeting="false" start="2019-10-14" duration="1" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
+            <task id="123" name="Front" color="#0033cc" meeting="false" start="2019-10-15" duration="3" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
+            <task id="124" name="Algo + maquette" color="#ff9900" meeting="false" start="2019-10-15" duration="3" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="120" name="Cours" color="#33ff33" meeting="false" start="2019-10-18" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+        <task id="58" name="Intégration" color="#ffff00" meeting="false" start="2019-10-21" duration="5" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+        <task id="155" name="Cours" color="#33ff33" meeting="false" start="2019-10-28" duration="5" complete="0" thirdDate="2019-10-14" thirdDate-constraint="0" expand="true"/>
+        <task id="95" name="Réalisation" color="#000000" meeting="false" start="2019-11-05" duration="12" complete="0" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true">
+            <task id="114" name="Front" color="#0033cc" meeting="false" start="2019-11-05" duration="2" complete="0" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true" cost-manual-value="2360.0" cost-calculated="true"/>
+            <task id="125" name="Algo + Panel" color="#ff9900" meeting="false" start="2019-11-05" duration="2" complete="0" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
+            <task id="185" name="Algo + Panel" color="#ff9900" meeting="false" start="2019-11-05" duration="1" complete="0" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true" cost-manual-value="2760.0" cost-calculated="true"/>
+            <task id="128" name="Script" color="#ff9900" meeting="false" start="2019-11-05" duration="2" complete="0" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true" cost-manual-value="1180.0" cost-calculated="true"/>
+            <task id="188" name="Cours" color="#33ff33" meeting="false" start="2019-11-07" duration="1" complete="0" thirdDate="2019-10-14" thirdDate-constraint="0" expand="true"/>
+            <task id="182" name="Script" color="#ff9900" meeting="false" start="2019-11-08" duration="1" complete="0" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true" cost-manual-value="1180.0" cost-calculated="true"/>
+            <task id="190" name="Fred" color="#33ff33" meeting="false" start="2019-11-12" duration="2" complete="0" thirdDate="2019-10-14" thirdDate-constraint="0" expand="true" cost-manual-value="2560.0" cost-calculated="true"/>
+            <task id="193" name="Cours" color="#33ff33" meeting="false" start="2019-11-14" duration="1" complete="0" thirdDate="2019-10-14" thirdDate-constraint="0" expand="true" cost-manual-value="2560.0" cost-calculated="true"/>
+            <task id="197" name="Algo + Panel + Script" color="#ff9900" meeting="false" start="2019-11-15" duration="1" complete="0" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true" cost-manual-value="1970.0" cost-calculated="true"/>
+            <task id="201" name="Fred" color="#33ff33" meeting="false" start="2019-11-18" duration="1" complete="0" thirdDate="2019-10-14" thirdDate-constraint="0" expand="true" cost-manual-value="5120.0" cost-calculated="true"/>
+            <task id="204" name="Pitch" color="#33ff33" meeting="false" start="2019-11-19" duration="1" complete="0" thirdDate="2019-10-14" thirdDate-constraint="0" expand="true" cost-manual-value="2560.0" cost-calculated="true"/>
+            <task id="207" name="Fred" color="#33ff33" meeting="false" start="2019-11-20" duration="1" complete="0" thirdDate="2019-10-14" thirdDate-constraint="0" expand="true" cost-manual-value="2560.0" cost-calculated="true"/>
+            <task id="210" name="Algo + Panel + Script" color="#ff9900" meeting="false" start="2019-11-21" duration="1" complete="0" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true" cost-manual-value="2560.0" cost-calculated="true"/>
+        </task>
+        <task id="83" name="Rendu" color="#000000" meeting="false" start="2019-11-22" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
+            <task id="216" name="Rendu" color="#ff0033" meeting="false" start="2019-11-22" duration="1" complete="0" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Jonathan" function="Default:1" contacts="" phone="">
+            <rate name="standard" value="790"/>
+        </resource>
+        <resource id="1" name="Yamna" function="SoftwareDevelopment:2" contacts="" phone="">
+            <rate name="standard" value="590"/>
+        </resource>
+        <resource id="2" name="Dorian" function="SoftwareDevelopment:2" contacts="" phone="">
+            <rate name="standard" value="590"/>
+        </resource>
+        <resource id="3" name="Nicolas" function="SoftwareDevelopment:2" contacts="" phone="">
+            <rate name="standard" value="590"/>
+        </resource>
+    </resources>
+    <allocations>
+        <allocation task-id="84" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="86" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="87" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="58" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="120" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="121" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="124" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="155" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="125" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="185" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="188" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="190" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="193" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="197" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="201" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="204" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="207" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="210" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="216" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="85" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="58" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="120" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="122" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="124" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="128" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="155" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="182" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="188" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="190" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="193" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="197" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="201" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="204" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="207" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="210" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="216" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="88" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="93" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="58" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="120" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="124" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="125" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="155" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="185" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="188" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="190" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="193" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="197" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="201" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="204" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="207" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="210" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="216" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="88" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="93" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="114" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="58" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="120" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="123" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="155" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="185" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="188" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="190" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="193" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="197" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="201" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="204" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="207" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="210" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="216" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+    <roles>
+        <role id="1" name="Chef de projet"/>
+        <role id="2" name="Developpeur"/>
+    </roles>
+</project>

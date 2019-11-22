@@ -1,6 +1,7 @@
 # BankeSchön
 
 Création d’un logiciel permettant de cibler au mieux les clients potentiels avec les produits ayant le plus de chance de correspondre à leur besoin.
+
 Creative targeting software to better target potential customers with the products most likely to match their need.
 ## Getting Started
 
@@ -10,78 +11,60 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+Ce qui est nécéssaire pour installer l'application et comment les installer
+
 What things you need to install the software and how to install them
 
+* JAVA
 ```
-Give examples
+https://www.java.com/fr/download/
 ```
-
+* TomCat 9.0.27 (Télécharger le zip et le configurer dans votre IDE)
+```
+http://apache.mirrors.benatherton.com/tomcat/tomcat-9/v9.0.27/bin/apache-tomcat-9.0.27.zip
+```
+* Python 3.8.0
+```
+https://www.python.org/downloads/
+```
 ### Installing
+
+Les étapes pas à pas d'installation d'une version de devellopement fonctionnelle
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+Cloner le repertoire / Clone the repository
 
 ```
-Give the example
+https://github.com/Jonathan-Renault/BankeSchon.git
 ```
 
-And repeat
+Laisser les mises à jour / Let's the update do
 
 ```
-until finished
+Jusqu'à la fin / Until finished
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Installer l'interpreteur Pyhon / Install Python interpreter
 
 ```
-Give an example
+Jusqu'à la fin / Until finished
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Java](https://www.java.com/fr) - Le Langage utilisé pour l'application / The Language used for the apps
+* [Python](https://www.python.org/) - Le Langage utilisé pour les script / The Language used for scripts
+* [Maven](https://maven.apache.org/) - Manager de dépendance / Dependency management
+* [Tomcat](https://tomcat.apache.org/index.html) - Conteneur web libre de servlets et JSP / Implementation of the Java technologies
+* [Postgres](https://www.postgresql.org/) - Systeme Open source de base de données relationnelles et objet / Open source object-relational database system
 
 ## Authors
 
-* **Nicolas Dufresne** - *Développeur* - [Lien Git](https://github.com/Jonathan-Renault)
+* **Nicolas Dufresne** - *Développeur* - [Lien Git](https://github.com/NicolasDufresne)
 
 * **Dorian Legros** - *Développeur* - [Lien Git](https://github.com/DorianLegros)
 
-* **Yamna Melki** - *Développeur* - [Lien Git](https://github.com/NicolasDufresne)
+* **Yamna Melki** - *Développeur* - [Lien Git](https://github.com/Melkibson)
 
-* **Jonathan Renault** - *Responsable de Projet* - [Lien Git](https://github.com/Melkibson)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* **Jonathan Renault** - *Responsable de Projet* - [Lien Git](https://github.com/Jonathan-Renault)

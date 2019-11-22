@@ -1,0 +1,173 @@
+Combien de lignes :
+select count(*)
+From (SELECT MAX(number)
+FROM family_situation
+group by number) AS bla
+
+Combien de vente hier FAIT 1
+CREATE VIEW sellsuccess_1 AS
+select count(*)
+FROM (SELECT id_user
+FROM history
+WHERE created_at = date(now())-1
+AND accepted = true
+GROUP BY id_user) AS bla
+
+Combien de vente hier FAIT 30
+CREATE VIEW sellsuccess_30 AS
+select count(*)
+FROM (SELECT id_user
+FROM history
+WHERE created_at > date(now())-30
+AND accepted = true
+GROUP BY id_user) AS bla
+
+Combien de vente raté FAIT 1 et 30
+CREATE VIEW sellfail_1 AS
+select count(*)
+FROM (SELECT id_user
+FROM history
+WHERE created_at = date(now())-1
+AND accepted = false
+GROUP BY id_user) AS bla
+
+Combien de vente raté FAIT 30
+CREATE VIEW sellfail_30 AS
+select count(*)
+FROM (SELECT id_user
+FROM history
+WHERE created_at > date(now())-30
+AND accepted = false
+GROUP BY id_user) AS bla
+
+Combien d'appel FAIT 30
+CREATE VIEW howmanycall_1 AS
+select count(*)
+FROM (SELECT id_user
+FROM history
+WHERE created_at = date(now())-1
+GROUP BY id_user) AS bla
+
+Combien d'appel FAIT 30
+CREATE VIEW howmanycall_30 AS
+select count(*)
+FROM (SELECT id_user
+FROM history
+WHERE created_at > date(now())-30
+GROUP BY id_user) AS bla
+
+Combien de prospet et client FAIT
+CREATE VIEW howmanyprospect AS
+select count(*)
+From (SELECT MAX(id)
+FROM prospects
+group by id) AS bla
+
+Prospect et client FAIT
+CREATE VIEW howmanyprospect_iscustomer AS
+SELECT count(*)
+FROM (SELECT MAX(id)
+FROM prospects
+WHERE is_customer = 1
+GROUP BY id) AS bla
+
+Que prospect FAIT
+CREATE VIEW howmanyprospect_notiscustomer AS
+SELECT count(*)
+FROM (SELECT MAX(id)
+FROM prospects
+WHERE is_customer = 0
+GROUP BY id) AS bla
+
+Meilleur vendeur hier FAIT 1 et 30
+CREATE VIEW bestseller_1 AS
+SELECT *
+FROM (
+SELECT id_user, count(id_offer)
+FROM history
+WHERE accepted = true
+AND created_at = date(now())-1
+GROUP BY id_user
+ORDER BY count(id_offer) DESC
+LIMIT 1
+) AS bla
+
+Meilleur vendeur hier FAIT 30
+CREATE VIEW bestseller_1 AS
+SELECT *
+FROM (
+SELECT id_user, count(id_offer)
+FROM history
+WHERE accepted = true
+AND created_at > date(now())-30
+GROUP BY id_user
+ORDER BY count(id_offer) DESC
+LIMIT 1
+) AS bla
+
+Produit le plus vendu hier FAIT
+CREATE VIEW mostsell_1 AS
+SELECT *
+FROM (
+SELECT id_offer, count(id_offer)
+FROM history
+WHERE accepted = true
+AND created_at = date(now())-1
+GROUP BY id_offer
+ORDER BY count(id_offer) DESC
+LIMIT 1
+) AS bla
+
+Produit le plus vendu hier FAIT 30
+CREATE VIEW mostsell_30 AS
+SELECT *
+FROM (
+SELECT id_offer, count(id_offer)
+FROM history
+WHERE accepted = true
+AND created_at > date(now())-30
+GROUP BY id_offer
+ORDER BY count(id_offer) DESC
+LIMIT 1
+) AS bla
+
+Tout les prospects FAIT
+CREATE VIEW all_prospects AS
+    SELECT *
+    FROM prospects
+
+Toutes les offres FAIT
+CREATE VIEW all_offers AS
+    SELECT *
+    FROM offers
+
+Insert prospects FAIT
+INSERT INTO "prospects" (id,is_customer,name,surname,birthday,tel,mail,can_be_contacted,family_situation,professional_situation,salary,created_at) VALUES (1,0,'Crawford','Blossom','1949-07-23','08 36 53 19 40','lorem.eu@variusorci.com','1',3,2,1203,'2019-07-29'),(2,1,'Estrada','Isadora','1957-10-20','01 24 49 59 16','vitae.odio.sagittis@justo.com','1',1,5,2604,'2019-11-01'),(3,1,'Cooper','Sydnee','1982-07-17','04 24 50 52 03','Morbi.vehicula.Pellentesque@aliquetdiamSed.co.uk','1',2,1,1378,'2019-04-17'),(4,0,'Greene','Mara','1941-03-28','04 38 30 93 80','a.sollicitudin@arcuVestibulum.com','1',2,5,517,'2019-02-14'),(5,1,'Richmond','Sandra','1965-02-21','01 38 82 99 56','Mauris@risusDuisa.org','1',2,1,1946,'2019-05-05'),(6,2,'Nieves','Rama','1948-08-11','01 17 32 72 29','mauris.id.sapien@pede.net','0',2,2,1653,'2019-07-22'),(7,1,'Ball','Carter','1993-08-20','07 12 93 57 36','tempus@egestas.com','0',2,5,2247,'2019-05-01'),(8,1,'Humphrey','Bertha','1967-01-21','03 40 78 26 75','luctus@Maurismagna.edu','0',2,3,2204,'2019-07-13'),(9,1,'Hunter','Ralph','1946-10-05','08 42 22 54 43','sem@malesuadaut.ca','0',3,5,2353,'2019-03-29'),(10,2,'Carson','Cody','1970-08-22','06 73 62 57 73','malesuada.fames.ac@nulla.com','0',2,3,2341,'2019-01-07');
+INSERT INTO "prospects" (id,is_customer,name,surname,birthday,tel,mail,can_be_contacted,family_situation,professional_situation,salary,created_at) VALUES (11,0,'Sullivan','Elvis','1987-03-08','01 84 13 14 98','eu.dui.Cum@dui.net','0',1,4,2625,'2019-06-15'),(12,2,'Love','Emmanuel','1999-02-09','03 03 38 35 87','vel@fermentumrisusat.edu','0',3,3,1102,'2019-05-15'),(13,0,'Shelton','Summer','1961-06-29','03 93 75 26 07','dolor@quam.net','1',2,2,1563,'2019-02-27'),(14,0,'Everett','Evan','1934-06-12','06 68 13 25 47','odio.Aliquam@nonenim.co.uk','1',2,5,1336,'2019-07-15'),(15,2,'England','Leonard','1987-11-08','05 75 68 61 21','Lorem@idante.edu','0',3,2,1729,'2019-02-14'),(16,1,'Pennington','Melyssa','1984-07-14','08 58 78 84 70','massa@orciluctus.ca','1',1,5,1663,'2019-08-20'),(17,0,'Ross','Florence','1961-11-12','04 19 78 87 73','ante.blandit.viverra@Phasellus.com','1',1,5,976,'2019-10-30'),(18,1,'Lawrence','Suki','1934-11-17','02 91 26 61 77','adipiscing@Nunc.edu','1',3,4,1537,'2019-11-05'),(19,0,'Bright','Tarik','1933-12-21','04 17 88 23 36','sit.amet@sodaleselit.org','1',2,3,1316,'2018-12-22'),(20,2,'Carver','Uriel','1939-02-20','01 52 44 14 01','dictum.eu.placerat@magnaCras.edu','0',2,3,909,'2019-08-06');
+INSERT INTO "prospects" (id,is_customer,name,surname,birthday,tel,mail,can_be_contacted,family_situation,professional_situation,salary,created_at) VALUES (21,0,'Maxwell','Grant','1988-08-22','09 11 03 03 22','lobortis.Class@adipiscing.co.uk','1',2,2,1799,'2019-02-06'),(22,2,'Buckley','Xantha','1968-07-02','06 18 31 85 29','mauris.sapien.cursus@luctusCurabituregestas.co.uk','1',1,1,1040,'2019-10-08'),(23,2,'Landry','Todd','1956-10-15','02 27 91 45 90','neque.venenatis.lacus@felisNullatempor.co.uk','1',2,3,1345,'2019-02-11'),(24,0,'Reeves','Guy','1945-07-07','03 19 09 10 04','turpis@quamvel.co.uk','0',1,1,1690,'2019-08-20'),(25,0,'Wade','Chastity','1932-11-10','05 75 38 73 74','Morbi.sit@estconguea.co.uk','0',3,2,1837,'2019-05-20'),(26,0,'Mcdaniel','Scarlett','1975-07-31','01 77 61 35 48','at@euelit.edu','0',1,3,2391,'2019-10-10'),(27,1,'Hawkins','Medge','1946-12-13','07 15 77 83 70','dolor@sollicitudinadipiscing.com','0',1,3,1722,'2019-10-26'),(28,1,'Morrow','Angela','1995-05-08','01 77 07 20 14','iaculis.odio@vitae.com','1',2,4,1379,'2019-06-13'),(29,0,'Moreno','Ivan','1966-06-18','02 44 89 21 31','malesuada@erat.net','1',3,1,2218,'2019-06-11'),(30,0,'Raymond','Signe','1980-04-08','04 10 78 84 66','vestibulum.lorem@maurisblandit.ca','0',2,3,843,'2019-02-09');
+INSERT INTO "prospects" (id,is_customer,name,surname,birthday,tel,mail,can_be_contacted,family_situation,professional_situation,salary,created_at) VALUES (31,0,'Hurley','Inga','1937-01-30','05 12 86 64 57','eu.dui@inhendreritconsectetuer.ca','1',2,2,1705,'2019-02-21'),(32,0,'Gallagher','Herrod','1997-03-13','06 40 96 79 31','vitae@tellus.edu','0',1,4,723,'2019-08-09'),(33,0,'Page','Axel','1978-03-01','08 11 03 46 85','tellus@eget.edu','1',1,3,1385,'2019-05-23'),(34,2,'Pollard','Madonna','1989-09-06','05 57 25 45 17','id.mollis@SeddictumProin.org','1',1,2,908,'2019-10-04'),(35,1,'Santos','Channing','1994-03-16','08 52 66 94 36','Curabitur.sed@eu.com','0',1,2,530,'2019-04-09'),(36,0,'Conrad','Hiroko','1946-10-01','07 16 69 91 83','Donec.nibh@acurnaUt.co.uk','0',2,4,2325,'2018-11-24'),(37,1,'Snyder','Gannon','1964-08-04','02 37 81 66 44','congue.In.scelerisque@Aliquam.co.uk','1',3,5,2556,'2019-04-12'),(38,2,'Peters','Sacha','1972-05-05','03 12 94 37 47','lobortis.nisi.nibh@risus.net','0',2,3,1175,'2019-06-20'),(39,1,'Donovan','Kylynn','1970-04-29','05 13 51 66 84','ipsum.porta.elit@semPellentesque.org','1',1,5,1144,'2019-06-25'),(40,1,'Huber','Laurel','1931-03-10','07 02 18 69 89','adipiscing.fringilla.porttitor@primisinfaucibus.ca','1',3,4,1423,'2019-10-28');
+INSERT INTO "prospects" (id,is_customer,name,surname,birthday,tel,mail,can_be_contacted,family_situation,professional_situation,salary,created_at) VALUES (41,1,'Medina','Macon','1995-04-13','03 81 49 46 63','purus.sapien.gravida@tempor.org','0',1,5,2132,'2019-04-10'),(42,2,'Oneill','Christen','1941-12-11','06 92 08 82 82','aliquet@est.net','1',2,2,2351,'2018-11-28'),(43,2,'Andrews','Elton','1999-12-22','07 84 16 36 52','Proin.velit@tempus.edu','0',3,5,1364,'2019-09-09'),(44,1,'Warren','Lana','1993-12-17','09 62 83 67 05','luctus@auctor.ca','0',1,1,1951,'2018-12-18'),(45,1,'Mercado','Olivia','1936-11-21','08 88 86 99 95','arcu.ac@ac.edu','0',3,1,1974,'2019-08-11'),(46,2,'Smith','Judith','1951-01-21','09 63 61 64 73','Morbi@at.ca','0',3,2,1815,'2019-07-31'),(47,2,'Pugh','Kareem','1954-03-15','08 12 63 61 12','Aliquam.fringilla@sodaleselit.com','1',2,2,2596,'2019-10-18'),(48,2,'Cox','Chastity','1936-03-02','02 04 49 02 89','eget@Utsagittis.edu','0',1,3,1585,'2019-06-21'),(49,2,'Moreno','Orla','1979-12-08','02 38 69 33 11','eget@Curabitur.ca','1',3,2,1314,'2019-08-01'),(50,2,'Rowland','Beverly','1983-03-11','02 76 54 78 44','bibendum.sed.est@mollisneccursus.com','1',2,2,1855,'2019-05-02');
+INSERT INTO "prospects" (id,is_customer,name,surname,birthday,tel,mail,can_be_contacted,family_situation,professional_situation,salary,created_at) VALUES (51,1,'Cline','Teegan','1936-12-07','08 10 86 18 09','malesuada@montesnascetur.ca','1',1,3,1455,'2019-01-03'),(52,2,'Griffith','Nomlanga','1999-10-26','01 34 24 31 70','at@seddictumeleifend.ca','1',3,4,2939,'2019-07-05'),(53,0,'Mcclain','Xyla','1947-07-15','05 77 81 04 10','non.luctus@eueuismodac.co.uk','1',2,1,1695,'2019-08-06'),(54,0,'Noble','Kylan','1992-12-07','05 19 91 78 48','Sed@interdumligula.ca','0',1,4,1898,'2019-10-05'),(55,0,'Bruce','Anika','1948-12-17','02 84 08 49 12','interdum@loremac.org','0',2,1,2785,'2019-09-11'),(56,0,'Obrien','Preston','1940-12-11','01 04 21 82 34','vestibulum.Mauris.magna@nonbibendumsed.com','0',1,4,1298,'2019-01-05'),(57,1,'Clemons','Grace','1993-05-14','06 53 21 61 12','vel.est.tempor@nulla.net','1',2,3,2309,'2019-10-13'),(58,0,'Hensley','Fiona','1947-01-29','06 34 43 14 37','nonummy.ultricies@Suspendisse.com','0',1,1,2452,'2019-02-11'),(59,1,'Barker','Lisandra','1936-10-25','04 49 46 74 34','id@vitaevelitegestas.net','1',1,3,2383,'2019-05-04'),(60,2,'Booth','Hector','1999-01-08','02 49 45 27 88','lacinia.mattis.Integer@dolordolortempus.net','0',1,5,1775,'2019-03-12');
+INSERT INTO "prospects" (id,is_customer,name,surname,birthday,tel,mail,can_be_contacted,family_situation,professional_situation,salary,created_at) VALUES (61,1,'Franco','Lane','1975-03-13','03 16 71 63 43','non@Donecegestas.org','1',1,5,2399,'2019-08-12'),(62,2,'Drake','Ginger','1997-05-27','06 15 96 66 43','ante.ipsum@vitae.co.uk','1',1,2,1178,'2019-08-15'),(63,1,'Young','Tanek','1951-05-19','08 04 85 97 24','Nullam@Aliquamfringilla.com','1',3,4,838,'2019-05-10'),(64,1,'Deleon','Jermaine','1946-12-30','07 25 93 82 88','accumsan.neque@ac.org','0',1,4,1235,'2018-11-30'),(65,2,'Zimmerman','Fallon','1948-03-16','02 08 70 46 02','lobortis@venenatis.org','1',3,1,504,'2019-07-12'),(66,0,'Carver','Christine','1952-06-05','06 99 89 50 72','dis.parturient.montes@penatibusetmagnis.org','0',2,3,714,'2019-08-20'),(67,1,'Oneill','Tanek','1998-06-26','07 18 05 54 42','suscipit.nonummy.Fusce@eget.org','0',3,5,680,'2019-01-11'),(68,1,'Gallegos','Price','1931-11-26','07 03 99 95 88','augue.porttitor@vitae.edu','1',3,3,2523,'2019-09-18'),(69,2,'Pickett','Connor','1993-05-29','05 29 71 40 89','ornare.In.faucibus@nuncullamcorpereu.ca','0',3,2,1364,'2019-07-04'),(70,2,'Mills','Melissa','1988-01-25','06 65 64 60 98','et@aptenttacitisociosqu.co.uk','1',1,5,2811,'2019-05-23');
+INSERT INTO "prospects" (id,is_customer,name,surname,birthday,tel,mail,can_be_contacted,family_situation,professional_situation,salary,created_at) VALUES (71,1,'Kinney','Peter','1969-05-19','02 22 50 57 09','Aliquam.fringilla@diamvelarcu.com','1',3,4,2397,'2019-09-14'),(72,2,'Ryan','Silas','1978-12-11','02 75 60 96 17','dui.semper@malesuadavel.edu','1',3,1,1183,'2019-02-07'),(73,1,'Terrell','Roary','1963-12-11','05 36 71 57 40','Mauris@cursusvestibulumMauris.ca','0',2,4,1556,'2019-05-19'),(74,0,'Schwartz','Jasmine','1952-07-03','07 29 08 79 52','gravida@loremegetmollis.net','1',2,1,2598,'2019-02-27'),(75,0,'Livingston','Sheila','1962-12-16','02 80 60 46 50','volutpat@montesnasceturridiculus.edu','0',1,1,2915,'2019-07-21'),(76,1,'Byers','Odysseus','1933-07-04','03 98 25 88 69','mauris.id@arcuacorci.edu','1',1,2,1107,'2019-05-08'),(77,0,'Phelps','Connor','1971-12-27','09 11 20 36 60','semper.tellus@fringilla.edu','0',1,5,1452,'2019-02-18'),(78,0,'Bush','Signe','1979-03-01','03 79 76 90 08','augue.id.ante@commodoipsumSuspendisse.edu','1',2,4,2875,'2019-09-16'),(79,0,'Head','Leandra','1970-12-25','06 71 76 73 92','dictum.mi@ac.ca','0',3,3,1745,'2018-12-18'),(80,1,'Hinton','Charity','1976-08-17','08 36 31 76 98','nunc@quispedeSuspendisse.org','0',1,3,1804,'2018-12-10');
+INSERT INTO "prospects" (id,is_customer,name,surname,birthday,tel,mail,can_be_contacted,family_situation,professional_situation,salary,created_at) VALUES (81,0,'Phillips','Winter','1974-12-02','07 81 27 73 92','nibh@temporbibendum.ca','0',2,4,2546,'2019-03-22'),(82,2,'Crane','Wang','1953-09-08','02 74 40 90 43','laoreet.lectus@consectetuer.co.uk','1',1,5,2422,'2019-07-13'),(83,0,'Roman','Lillian','1949-08-23','05 30 03 54 95','Quisque.libero.lacus@malesuada.ca','1',3,2,2976,'2019-11-08'),(84,2,'Smith','Gwendolyn','1950-08-11','07 14 51 34 17','elit@quis.co.uk','1',3,5,2374,'2019-06-12'),(85,0,'Morrow','Jason','1995-01-31','06 33 99 18 40','lobortis@Uttinciduntorci.com','0',3,4,1220,'2019-03-23'),(86,0,'Potter','Bruno','1944-07-14','06 07 03 93 32','Sed@atvelitCras.net','0',2,5,2820,'2019-01-17'),(87,1,'Bender','Devin','1971-05-09','08 69 16 02 13','faucibus.id@nonegestas.edu','1',3,5,1642,'2018-12-01'),(88,0,'Wilcox','Fletcher','1976-03-18','07 50 73 60 53','sit.amet.faucibus@et.edu','0',1,5,511,'2019-07-25'),(89,1,'Vazquez','Yetta','1934-03-25','09 53 43 60 43','mattis.Cras.eget@duinectempus.ca','0',3,1,1560,'2019-06-25'),(90,0,'Middleton','Chava','1983-11-01','06 01 78 96 42','nulla@a.org','0',2,1,1281,'2019-10-20');
+INSERT INTO "prospects" (id,is_customer,name,surname,birthday,tel,mail,can_be_contacted,family_situation,professional_situation,salary,created_at) VALUES (91,0,'Farrell','Jelani','1975-05-07','06 17 36 56 81','at@nonummyipsum.com','0',1,1,1651,'2019-02-09'),(92,2,'Raymond','Ina','1954-06-24','06 31 95 79 25','eu.tellus@etcommodoat.com','1',3,2,2039,'2019-02-09'),(93,2,'Allison','Randall','1946-09-20','08 85 44 79 01','ipsum@Namacnulla.edu','1',1,3,1171,'2018-11-29'),(94,2,'Herrera','Jin','1951-05-21','05 67 62 43 40','sem@eget.edu','1',3,4,2289,'2019-06-10'),(95,1,'Kline','Maile','1981-02-04','04 90 61 22 08','pellentesque.Sed.dictum@pharetrautpharetra.com','0',1,1,2980,'2019-02-26'),(96,2,'Santana','Nolan','1998-12-25','01 82 67 93 03','ipsum.Phasellus.vitae@Curabiturconsequat.edu','1',2,3,2338,'2019-07-12'),(97,2,'Walker','Urielle','1978-09-01','03 78 40 84 35','amet.risus@sapienmolestieorci.net','1',1,5,1102,'2019-01-27'),(98,0,'Franklin','Nola','1966-04-03','08 98 77 88 97','mauris.sapien@etmalesuada.com','0',1,5,2997,'2018-12-26'),(99,2,'Gilliam','Pearl','1983-12-07','02 01 73 23 62','nisl@sitamet.edu','0',1,5,1446,'2019-10-09'),(100,1,'Hampton','Tallulah','1966-08-09','09 79 28 11 32','lacinia@sitamet.co.uk','0',2,4,2313,'2019-10-13');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
